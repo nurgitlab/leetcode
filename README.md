@@ -1,2 +1,2 @@
-# codeforces
+# Leetcode
 Repository for solving algorithms
