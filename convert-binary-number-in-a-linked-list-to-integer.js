@@ -1,6 +1,26 @@
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @return {number}
+ */
 const getDecimalValue = function(head) {
+  let str = ''
+  function goToNext(node) {
+    if (node!==null) {
+      str+=node.val
+      goToNext(node.next)
+    }
+  }
+  goToNext(head)
 
-}
+  return binToNum(str)
+};
 
 function binToNum (str) {
   let ans = 0
@@ -11,7 +31,3 @@ function binToNum (str) {
 
   return ans
 }
-
-console.log(binToNum('100'))
-
-console.log(getDecimalValue())
