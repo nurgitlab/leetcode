@@ -8,23 +8,20 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number}
+ * @return {boolean}
  */
-const maxDepth = function(root) {
-  let max = 0
-  function goToNext(node, s) {
-    if (node!==null) {
-      s = s + 1
-      max = Math.max(s, max)
+var isUnivalTree = function(root) {
+  let set = new Set()
 
-      goToNext(node.left, s)
-      goToNext(node.right, s)
-
-      console.log(node.val, s)
+  function goToNext(node) {
+    if (node!== null) {
+      set.add(node.val)
+      goToNext(node.left)
+      goToNext(node.right)
     }
   }
 
-  goToNext(root, 0)
+  goToNext(root)
 
-  return max
+  return set.size === 1
 };

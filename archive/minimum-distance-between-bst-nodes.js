@@ -10,21 +10,23 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const maxDepth = function(root) {
-  let max = 0
-  function goToNext(node, s) {
+var minDiffInBST = function(root) {
+  let ans = []
+  function goTo (node) {
     if (node!==null) {
-      s = s + 1
-      max = Math.max(s, max)
-
-      goToNext(node.left, s)
-      goToNext(node.right, s)
-
-      console.log(node.val, s)
+      ans.push(node.val)
+      goTo(node.left)
+      goTo(node.right)
     }
   }
 
-  goToNext(root, 0)
+  goTo(root)
 
-  return max
+  ans.sort((a,b) => a - b)
+  let r = Infinity
+  for (let i = 0; i < ans.length - 1; i++) {
+    r = Math.min(r, Math.abs(ans[i] - ans[i + 1]))
+  }
+
+  return r
 };

@@ -8,23 +8,16 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number}
+ * @return {number[]}
  */
-const maxDepth = function(root) {
-  let max = 0
-  function goToNext(node, s) {
+var postorderTraversal = function(root) {
+  function goToNext(node) {
     if (node!==null) {
-      s = s + 1
-      max = Math.max(s, max)
-
-      goToNext(node.left, s)
-      goToNext(node.right, s)
-
-      console.log(node.val, s)
+      return [...goToNext(node.left), ...goToNext(node.right), node.val]
+    } else {
+      return []
     }
   }
 
-  goToNext(root, 0)
-
-  return max
-};
+  return goToNext(root)
+}

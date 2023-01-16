@@ -8,23 +8,34 @@
  */
 /**
  * @param {TreeNode} root
- * @return {number}
+ * @return {number[]}
  */
-const maxDepth = function(root) {
-  let max = 0
+var averageOfLevels = function(root) {
+  let mem = {}
   function goToNext(node, s) {
     if (node!==null) {
-      s = s + 1
-      max = Math.max(s, max)
-
+      s++
+      if (mem[s] === undefined) {
+        mem[s] = []
+      }
+      mem[s].push(node.val)
       goToNext(node.left, s)
       goToNext(node.right, s)
-
-      console.log(node.val, s)
     }
   }
-
   goToNext(root, 0)
+  console.log(mem)
+  let arr = []
 
-  return max
+  Object.keys(mem).forEach(k => {
+    let sum = 0
+    mem[k].forEach(el => sum+=el)
+    arr.push([k, sum/mem[k].length])
+  })
+
+  arr.sort((a,b) => a[0] - b[0])
+
+  arr = arr.map(el => el[1])
+
+  return arr
 };
