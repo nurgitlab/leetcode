@@ -1,4 +1,4 @@
-const buildArray = function(nums) {
+const buildArray = function (nums) {
   let ans = []
   nums.forEach((el, i) => {
     ans[i] = nums[nums[i]]
@@ -7,4 +7,4 @@ const buildArray = function(nums) {
   return ans
 };
 
-console.log(buildArray([0,2,1,5,3,4]))
+console.log(buildArray([0, 2, 1, 5, 3, 4]))

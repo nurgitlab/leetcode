@@ -1,8 +1,10 @@
-const minSetSize = function(arr) {
+const minSetSize = function (arr) {
   let mem = {}
 
   arr.forEach(el => {
-    if (mem[el] === undefined) {mem[el] = 0}
+    if (mem[el] === undefined) {
+      mem[el] = 0
+    }
     mem[el]++
   })
 
@@ -12,17 +14,19 @@ const minSetSize = function(arr) {
     a.push([Number(k), mem[k]])
   })
 
-  a = a.sort((a,b) => b[1] - a[1])
+  a = a.sort((a, b) => b[1] - a[1])
   let sum = 0
   let ans = 0
 
   for (let i = 0; i < a.length; i++) {
-    sum+=a[i][1]
+    sum += a[i][1]
     ans++
-    if (sum >= (arr.length / 2)) {break}
+    if (sum >= (arr.length / 2)) {
+      break
+    }
   }
 
   return ans
 }
 
-console.log(minSetSize([3,3,3,3,5,5,5,2,2,7]))
+console.log(minSetSize([3, 3, 3, 3, 5, 5, 5, 2, 2, 7]))

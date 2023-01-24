@@ -10,11 +10,11 @@
  * @param {string} traversal
  * @return {TreeNode}
  */
-var recoverFromPreorder = function(traversal) {
-  traversal = traversal.split('-').map(el=> el==='' ? '-' : Number(el))
+var recoverFromPreorder = function (traversal) {
+  traversal = traversal.split('-').map(el => el === '' ? '-' : Number(el))
   let count = 0
   for (let i = 0; i < traversal.length; i++) {
-    if (traversal[i]!=='-') {
+    if (traversal[i] !== '-') {
       traversal[i] = [count + 1, traversal[i]]
       count = 0
     } else {
@@ -62,8 +62,8 @@ var recoverFromPreorder = function(traversal) {
 
   console.log(traversal[0])
 
-  function goTo (obj) {
-    if (obj!== null) {
+  function goTo(obj) {
+    if (obj !== null) {
       return new TreeNode(obj.value, goTo(obj.next[0]), goTo(obj.next[1]))
     }
   }

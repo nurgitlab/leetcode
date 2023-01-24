@@ -1,15 +1,17 @@
-const coinChange = function(coins, amount) {
+const coinChange = function (coins, amount) {
   const mem = []
   mem[amount] = 0
 
   for (let i = amount; i >= 1; i--) {
-    if (mem[i] === undefined) {continue}
+    if (mem[i] === undefined) {
+      continue
+    }
     coins.forEach(coin => {
       let nextValue = mem[i] + 1
-      if (mem[i-coin] === undefined) {
-        mem[i-coin] = nextValue
+      if (mem[i - coin] === undefined) {
+        mem[i - coin] = nextValue
       } else {
-        mem[i - coin] = Math.min(nextValue, mem[i-coin])
+        mem[i - coin] = Math.min(nextValue, mem[i - coin])
       }
     })
   }

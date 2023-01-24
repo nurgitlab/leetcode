@@ -22,7 +22,7 @@ const numRookCaptures = function (board) {
       }
       if (direction === 'down') {
         if (currentX < board.length - 1)
-        lookWithDirection(direction, currentX + 1, currentY)
+          lookWithDirection(direction, currentX + 1, currentY)
       }
 
       if (direction === 'left') {
@@ -33,7 +33,7 @@ const numRookCaptures = function (board) {
 
       if (direction === 'right') {
         if (currentY < board[0].length - 1)
-        lookWithDirection(direction, currentX, currentY + 1)
+          lookWithDirection(direction, currentX, currentY + 1)
       }
     }
   }
@@ -52,4 +52,4 @@ const numRookCaptures = function (board) {
   return ans
 };
 
-console.log(numRookCaptures([[".",".",".",".",".",".",".","."],[".","p","p","p","p","p",".","."],[".","p","p","B","p","p",".","."],[".","p","B","R","B","p",".","."],[".","p","p","B","p","p",".","."],[".","p","p","p","p","p",".","."],[".",".",".",".",".",".",".","."],[".",".",".",".",".",".",".","."]]))
+console.log(numRookCaptures([[".", ".", ".", ".", ".", ".", ".", "."], [".", "p", "p", "p", "p", "p", ".", "."], [".", "p", "p", "B", "p", "p", ".", "."], [".", "p", "B", "R", "B", "p", ".", "."], [".", "p", "p", "B", "p", "p", ".", "."], [".", "p", "p", "p", "p", "p", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."], [".", ".", ".", ".", ".", ".", ".", "."]]))

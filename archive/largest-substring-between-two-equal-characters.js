@@ -1,7 +1,7 @@
-const maxLengthBetweenEqualCharacters = function(s) {
+const maxLengthBetweenEqualCharacters = function (s) {
   let mem = {}
   s.split('').forEach((l, i) => {
-    if (mem[l]===undefined) {
+    if (mem[l] === undefined) {
       mem[l] = [i]
     } else {
       mem[l] = [...mem[l], i]
@@ -12,7 +12,9 @@ const maxLengthBetweenEqualCharacters = function(s) {
   Object.keys(mem).forEach(k => {
     if (mem[k].length > 1) {
       let localDist = mem[k][mem[k].length - 1] - mem[k][0] - 1
-      if (localDist > ans) {ans = localDist}
+      if (localDist > ans) {
+        ans = localDist
+      }
     }
   })
   return ans

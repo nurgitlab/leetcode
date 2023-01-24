@@ -1,4 +1,4 @@
-const smallestRange = function(nums) {
+const smallestRange = function (nums) {
   if (nums.length === 1) {
     let a = Infinity
     let r = []
@@ -6,9 +6,9 @@ const smallestRange = function(nums) {
       return [nums[0][0], nums[0][0]]
     }
     for (let i = 0; i < nums[0].length - 1; i++) {
-      if (a > nums[0][i+1] - nums[0][i]) {
+      if (a > nums[0][i + 1] - nums[0][i]) {
         r = [nums[0][i], nums[0][i + 1]]
-        a = nums[0][i+1] - nums[0][i]
+        a = nums[0][i + 1] - nums[0][i]
       }
     }
 
@@ -50,18 +50,20 @@ const smallestRange = function(nums) {
   let mc = Infinity
 
   mem.forEach(el => mc = Math.min(mc, el[0]))
-  mem = mem.filter(el => el[0] === mc).sort((a,b) => a[1][0] - b[1][0])
+  mem = mem.filter(el => el[0] === mc).sort((a, b) => a[1][0] - b[1][0])
 
   return mem[0][1]
 }
 
-function allK (k, nums) {
+function allK(k, nums) {
   let ans = 0
   k.forEach((el, i) => {
-    if (el >= nums[i].length) {ans++}
+    if (el >= nums[i].length) {
+      ans++
+    }
   })
 
   return !(ans === k.length)
 }
 
-console.log(smallestRange([[1,2,3]]))
+console.log(smallestRange([[1, 2, 3]]))

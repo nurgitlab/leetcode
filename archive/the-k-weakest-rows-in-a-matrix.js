@@ -10,10 +10,10 @@ const kWeakestRows = function (mat, k) {
     arr.push([sold, i])
   })
 
-  arr.sort((a,b) => {
-    if (a[0]>b[0]) {
+  arr.sort((a, b) => {
+    if (a[0] > b[0]) {
       return 1
-    } else if (a[0]===b[0]) {
+    } else if (a[0] === b[0]) {
       if (a[1] > b[1]) {
         return 1
       } else {

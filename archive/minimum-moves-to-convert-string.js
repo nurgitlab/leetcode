@@ -1,9 +1,9 @@
-const minimumMoves = function(s) {
+const minimumMoves = function (s) {
   let c = 0
   for (let i = 0; i < s.length; i++) {
-    if (s[i]==='X') {
+    if (s[i] === 'X') {
       c++
-      i+=2
+      i += 2
     }
   }
 

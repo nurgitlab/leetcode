@@ -10,11 +10,11 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-var isUnivalTree = function(root) {
+var isUnivalTree = function (root) {
   let set = new Set()
 
   function goToNext(node) {
-    if (node!== null) {
+    if (node !== null) {
       set.add(node.val)
       goToNext(node.left)
       goToNext(node.right)

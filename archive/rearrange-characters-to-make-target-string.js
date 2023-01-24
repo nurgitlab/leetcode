@@ -1,7 +1,9 @@
-const rearrangeCharacters = function(s, target) {
+const rearrangeCharacters = function (s, target) {
   const lettersStore = {}
   s.split('').forEach(letter => {
-    if (lettersStore[letter] === undefined) {lettersStore[letter] = 1} else {
+    if (lettersStore[letter] === undefined) {
+      lettersStore[letter] = 1
+    } else {
       lettersStore[letter]++
     }
   })

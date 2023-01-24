@@ -1,4 +1,4 @@
-const countConsistentStrings = function(allowed, words) {
+const countConsistentStrings = function (allowed, words) {
   allowed = allowed.split('')
 
   let counter = 0
@@ -23,4 +23,4 @@ const countConsistentStrings = function(allowed, words) {
   return counter
 };
 
-console.log(countConsistentStrings( "abc", ["a","b","c","ab","ac","bc","abc"]))
+console.log(countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"]))

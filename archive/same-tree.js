@@ -11,18 +11,21 @@
  * @param {TreeNode} q
  * @return {boolean}
  */
-var isSameTree = function(p, q) {
+var isSameTree = function (p, q) {
   let ans = true
-  function next (node1, node2) {
+
+  function next(node1, node2) {
     if (node1 !== null && node2 !== null) {
-      if (node1.val !== node2.val) {ans = false}
-      if (node1.left !== null  && node2.left!==null) {
+      if (node1.val !== node2.val) {
+        ans = false
+      }
+      if (node1.left !== null && node2.left !== null) {
         next(node1.left, node2.left)
       } else if (node1.left !== node2.left) {
         ans = false
       }
 
-      if (node1.right !== null  && node2.right!==null) {
+      if (node1.right !== null && node2.right !== null) {
         next(node1.right, node2.right)
       } else if (node1.right !== node2.right) {
         ans = false
@@ -32,7 +35,7 @@ var isSameTree = function(p, q) {
     }
   }
 
-  next(p,q)
+  next(p, q)
 
   return ans
 };

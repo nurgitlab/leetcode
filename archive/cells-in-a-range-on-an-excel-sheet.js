@@ -1,4 +1,4 @@
-const cellsInRange = function(s) {
+const cellsInRange = function (s) {
   let alphabet = []
 
   let l1 = s[0].charCodeAt(0)
@@ -7,7 +7,7 @@ const cellsInRange = function(s) {
   let n2 = Number(s[4])
 
   for (let i = l1; i <= l2; i++) {
-    for (let j = n1; j <=n2; j++) {
+    for (let j = n1; j <= n2; j++) {
       alphabet.push(String.fromCharCode(i) + j)
     }
   }
@@ -15,4 +15,4 @@ const cellsInRange = function(s) {
   return alphabet
 }
 
-console.log(cellsInRange( "A1:F1"))
+console.log(cellsInRange("A1:F1"))

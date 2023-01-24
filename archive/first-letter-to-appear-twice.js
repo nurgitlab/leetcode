@@ -1,4 +1,4 @@
-const repeatedCharacter = function(s) {
+const repeatedCharacter = function (s) {
   let mem = {}
   let ans = ''
   for (let i = 0; i < s.length; i++) {

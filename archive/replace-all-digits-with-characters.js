@@ -7,7 +7,9 @@ const replaceDigits = function (s) {
       if (!isLetter(s[i + 2]) && s[i + 2] !== undefined) {
         n += s[i + 2]
       }
-      if (s[i+1] === undefined) {break}
+      if (s[i + 1] === undefined) {
+        break
+      }
       ans += String.fromCharCode(Number(n) + s[i].charCodeAt(0))
     }
   }

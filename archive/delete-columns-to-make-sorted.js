@@ -7,7 +7,7 @@ const minDeletionSize = function (strs) {
   let ans = 0
   for (let j = 0; j < matrix[0].length; j++) {
     for (let i = 0; i < matrix.length - 1; i++) {
-      if (matrix[i][j].charCodeAt(0) > matrix[i+1][j].charCodeAt(0)) {
+      if (matrix[i][j].charCodeAt(0) > matrix[i + 1][j].charCodeAt(0)) {
         ans++
         break
       }
@@ -17,4 +17,4 @@ const minDeletionSize = function (strs) {
   return ans
 };
 
-console.log(minDeletionSize( ["zyx","wvu","tsr"]))
+console.log(minDeletionSize(["zyx", "wvu", "tsr"]))

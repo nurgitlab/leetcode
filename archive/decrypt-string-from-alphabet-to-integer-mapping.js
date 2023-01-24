@@ -11,7 +11,7 @@ var freqAlphabets = function (s) {
 
   for (let i = 0; i < s.length; i++) {
     let n = Number(s[i])
-    if (n===0 || isNaN(s[i])) continue
+    if (n === 0 || isNaN(s[i])) continue
     s[i] = numToLetter(n)
   }
 

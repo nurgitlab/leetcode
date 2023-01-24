@@ -1,6 +1,6 @@
 const largestWordCount = function (messages, senders) {
   let mem = {}
-  let max = - Infinity
+  let max = -Infinity
   for (let i = 0; i < messages.length; i++) {
     if (mem[senders[i]] === undefined) {
       mem[senders[i]] = messages[i].split(' ').length
@@ -18,7 +18,7 @@ const largestWordCount = function (messages, senders) {
       names.push(k)
     }
   })
-  names.sort((a,b) => {
+  names.sort((a, b) => {
     if (a > b) {
       return 1
     } else {
@@ -33,4 +33,4 @@ const largestWordCount = function (messages, senders) {
   }
 };
 
-console.log(largestWordCount(["How is leetcode for everyone","Leetcode is useful for practice"],  ["Bob","Charlie"]))
+console.log(largestWordCount(["How is leetcode for everyone", "Leetcode is useful for practice"], ["Bob", "Charlie"]))

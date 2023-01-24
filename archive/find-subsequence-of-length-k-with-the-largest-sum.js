@@ -12,11 +12,11 @@ const maxSubsequence = function (nums, k) {
     nums[maxEl[1]] = -Infinity
     k--
   }
-  sum.sort((a,b)=>{
+  sum.sort((a, b) => {
     if (a[1] > b[1]) {
       return 1
     } else {
-      return  -1
+      return -1
     }
   })
   let ans = []
@@ -27,4 +27,4 @@ const maxSubsequence = function (nums, k) {
   return ans
 };
 
-console.log(maxSubsequence([50,-75], 2))
+console.log(maxSubsequence([50, -75], 2))

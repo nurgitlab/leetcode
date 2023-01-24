@@ -1,10 +1,14 @@
-const onesMinusZeros = function(grid) {
-  let rows  = []
+const onesMinusZeros = function (grid) {
+  let rows = []
   let column = []
   grid.forEach((row, i) => {
     row.forEach((el, j) => {
-      if (rows[i] === undefined) {rows[i] = {0: 0, 1: 0}}
-      if (column[j]===undefined) {column[j]={0: 0, 1: 0}}
+      if (rows[i] === undefined) {
+        rows[i] = {0: 0, 1: 0}
+      }
+      if (column[j] === undefined) {
+        column[j] = {0: 0, 1: 0}
+      }
 
       rows[i][el]++
       column[j][el]++
@@ -25,4 +29,4 @@ const onesMinusZeros = function(grid) {
   return diff
 }
 
-console.log(onesMinusZeros([[0,1,1],[1,0,1],[0,0,1]]))
+console.log(onesMinusZeros([[0, 1, 1], [1, 0, 1], [0, 0, 1]]))

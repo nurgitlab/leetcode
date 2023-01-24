@@ -1,4 +1,4 @@
-const maximumWealth = function(accounts) {
+const maximumWealth = function (accounts) {
   let max = -Infinity
   accounts.forEach(line => {
     let sum = line.reduce((sum, current) => sum + current, 0)
@@ -8,4 +8,4 @@ const maximumWealth = function(accounts) {
   return max
 };
 
-console.log(maximumWealth([[1,2,3],[3,2,1]]))
+console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]))

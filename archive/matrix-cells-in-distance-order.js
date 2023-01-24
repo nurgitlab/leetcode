@@ -1,4 +1,4 @@
-const allCellsDistOrder = function(rows, cols, rCenter, cCenter) {
+const allCellsDistOrder = function (rows, cols, rCenter, cCenter) {
   let ans = []
 
   for (let i = 0; i < rows; i++) {
@@ -7,9 +7,9 @@ const allCellsDistOrder = function(rows, cols, rCenter, cCenter) {
       ans.push([[i, j], d])
     }
   }
-  ans.sort((a,b) => a[1] - b[1])
+  ans.sort((a, b) => a[1] - b[1])
   ans = ans.map(el => el[0])
   return ans
 }
 
-console.log(allCellsDistOrder( 2, 3, 1, 2))
+console.log(allCellsDistOrder(2, 3, 1, 2))

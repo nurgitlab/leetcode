@@ -27,8 +27,10 @@ const twoOutOfThree = function (nums1, nums2, nums3) {
   let ans = []
   Object.keys(mem).forEach(k => {
     let numOfNulls = 0
-    mem[k].forEach(el =>{
-      if (el ===0) {numOfNulls++}
+    mem[k].forEach(el => {
+      if (el === 0) {
+        numOfNulls++
+      }
     })
 
     if (numOfNulls <= 1) {
@@ -39,4 +41,4 @@ const twoOutOfThree = function (nums1, nums2, nums3) {
   return ans
 };
 
-console.log(twoOutOfThree( [1,2,2],  [4,3,3], [5]))
+console.log(twoOutOfThree([1, 2, 2], [4, 3, 3], [5]))

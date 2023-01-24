@@ -1,4 +1,4 @@
-const arrayStringsAreEqual = function(word1, word2) {
+const arrayStringsAreEqual = function (word1, word2) {
   let w1 = word1.join('')
   let w2 = word2.join('')
 

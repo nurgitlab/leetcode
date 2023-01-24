@@ -1,4 +1,4 @@
-const findCenter = function(edges) {
+const findCenter = function (edges) {
   let mem = {}
 
   edges.forEach(arr => {
@@ -13,7 +13,7 @@ const findCenter = function(edges) {
 
   let ans
   Object.keys(mem).forEach(k => {
-    if (mem[k]===edges.length) {
+    if (mem[k] === edges.length) {
       ans = Number(k)
     }
   })
@@ -21,4 +21,4 @@ const findCenter = function(edges) {
   return ans
 };
 
-console.log(findCenter([[1,2],[2,3],[4,2]]))
+console.log(findCenter([[1, 2], [2, 3], [4, 2]]))

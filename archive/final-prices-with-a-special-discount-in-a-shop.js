@@ -5,7 +5,7 @@ const finalPrices = function (prices) {
       if (i === j) {
         continue
       } else if (localPrice >= prices[j]) {
-        localPrice-=prices[j]
+        localPrice -= prices[j]
         break
       }
     }

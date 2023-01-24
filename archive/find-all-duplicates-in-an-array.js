@@ -1,4 +1,4 @@
-const findDuplicates = function(nums) {
+const findDuplicates = function (nums) {
   const mem = {}
   nums.forEach(n => {
     if (mem[n] === undefined) {
@@ -9,7 +9,9 @@ const findDuplicates = function(nums) {
   })
   let ans = []
   Object.keys(mem).forEach(k => {
-    if (mem[k] === 2) {ans.push(Number(k))}
+    if (mem[k] === 2) {
+      ans.push(Number(k))
+    }
   })
   return ans
 };

@@ -11,6 +11,7 @@ const maxAreaOfIsland = function (grid) {
   let numOfIsland = []
   let sum = 0
   let max = 0
+
   function rec(x, y) {
     sum += 1
     grid[x][y] = 0
@@ -44,4 +45,4 @@ const maxAreaOfIsland = function (grid) {
 };
 
 
-console.log(maxAreaOfIsland([[0,0,0,0,0,0,0,0]]))
+console.log(maxAreaOfIsland([[0, 0, 0, 0, 0, 0, 0, 0]]))

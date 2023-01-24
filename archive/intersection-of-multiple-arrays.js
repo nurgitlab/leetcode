@@ -1,4 +1,4 @@
-const intersection = function(nums) {
+const intersection = function (nums) {
   const mem = {}
   nums.forEach(arr => {
     arr.forEach(n => {
@@ -13,7 +13,7 @@ const intersection = function(nums) {
   let ans = []
 
   Object.keys(mem).forEach(k => {
-    if (mem[k]===nums.length) {
+    if (mem[k] === nums.length) {
       ans.push(Number(k))
     }
   })
@@ -21,4 +21,4 @@ const intersection = function(nums) {
   return ans
 }
 
-console.log(intersection([[3,1,2,4,5],[1,2,3,4],[3,4,5,6]]))
+console.log(intersection([[3, 1, 2, 4, 5], [1, 2, 3, 4], [3, 4, 5, 6]]))

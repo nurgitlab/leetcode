@@ -15,7 +15,7 @@ const trap = function (height) {
       l++
 
       if (height[l] < lm) {
-        ans+=lm - height[l]
+        ans += lm - height[l]
       } else {
         lm = height[l]
       }
@@ -23,7 +23,7 @@ const trap = function (height) {
       r--
 
       if (height[r] < rm) {
-        ans+=rm - height[r]
+        ans += rm - height[r]
       } else {
         rm = height[r]
       }
@@ -33,4 +33,4 @@ const trap = function (height) {
   return ans
 }
 
-console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+console.log(trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))

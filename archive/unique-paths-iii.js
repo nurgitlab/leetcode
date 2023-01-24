@@ -1,31 +1,34 @@
-
-const uniquePathsIII = function(grid) {
+const uniquePathsIII = function (grid) {
   let ans = 0
   let free = 0
-  let [x, y] = [-1,-1]
+  let [x, y] = [-1, -1]
 
   grid.forEach((str, i) => str.forEach((el, j) => {
     if (el === 1) {
-      x=i
-      y=j
+      x = i
+      y = j
     }
 
-    if (el !== -1) {free++}
+    if (el !== -1) {
+      free++
+    }
   }))
-  free-=1
+  free -= 1
 
   function goTo(table, x, y, counter) {
     table = JSON.parse(JSON.stringify(table))
-    if (x >= 0 && x < table.length && y>=0 && y < table[0].length) {
+    if (x >= 0 && x < table.length && y >= 0 && y < table[0].length) {
       if (table[x][y] === 2) {
-        if (counter === free) {ans++}
+        if (counter === free) {
+          ans++
+        }
       }
       if (table[x][y] !== -1) {
         table[x][y] = -1
-        goTo(table, x + 1, y, counter+1)
-        goTo(table, x - 1, y, counter+1)
-        goTo(table, x, y + 1, counter+1)
-        goTo(table, x, y - 1, counter+1)
+        goTo(table, x + 1, y, counter + 1)
+        goTo(table, x - 1, y, counter + 1)
+        goTo(table, x, y + 1, counter + 1)
+        goTo(table, x, y - 1, counter + 1)
       }
     }
   }
@@ -36,5 +39,4 @@ const uniquePathsIII = function(grid) {
 }
 
 
-
-console.log(uniquePathsIII([[1,0,0,0],[0,0,0,0],[0,0,0,2]]))
+console.log(uniquePathsIII([[1, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 2]]))

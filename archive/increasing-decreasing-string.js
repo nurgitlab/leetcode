@@ -15,14 +15,14 @@ const sortString = function (s) {
     arr.push([k, mem[k]])
   })
 
-  arr.sort((a,b) => a[0].charCodeAt(0) -  b[0].charCodeAt(0))
+  arr.sort((a, b) => a[0].charCodeAt(0) - b[0].charCodeAt(0))
 
   let ans = ''
 
   while (arr.length > 0) {
     for (let i = 0; i < arr.length; i++) {
       console.log(arr)
-      ans+=arr[i][0]
+      ans += arr[i][0]
       arr[i][1]--
 
       if (arr[i][1] === 0) {
@@ -32,8 +32,8 @@ const sortString = function (s) {
     }
     console.log(arr)
 
-    for (let i = arr.length - 1; i >=0; i--) {
-      ans+=arr[i][0]
+    for (let i = arr.length - 1; i >= 0; i--) {
+      ans += arr[i][0]
       arr[i][1]--
 
       if (arr[i][1] === 0) {

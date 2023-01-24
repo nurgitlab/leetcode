@@ -15,4 +15,4 @@ const countGoodRectangles = function (rectangles) {
   return ans
 }
 
-console.log(countGoodRectangles([[2,3],[3,7],[4,3],[3,7]]))
+console.log(countGoodRectangles([[2, 3], [3, 7], [4, 3], [3, 7]]))

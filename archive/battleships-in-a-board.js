@@ -35,7 +35,7 @@ const countBattleships = function (board) {
     for (let j = 0; j < board[i].length; j++) {
       if (board[i][j] === 'X') {
         countOfShips++
-        clearCell(i,j)
+        clearCell(i, j)
       }
     }
   }

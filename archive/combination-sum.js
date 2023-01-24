@@ -4,10 +4,9 @@ const combinationSum = function (candidates, target) {
   function rec(n, arr) {
     for (let i = 0; i < candidates.length; i++) {
       if (n - candidates[i] === 0) {
-        let s = [...arr, candidates[i]].sort((a,b) => a - b)
+        let s = [...arr, candidates[i]].sort((a, b) => a - b)
         set.add(`${s}`)
-      } else
-      if (n - candidates[i] > 0) {
+      } else if (n - candidates[i] > 0) {
         rec(n - candidates[i], [...arr, candidates[i]])
       }
     }
@@ -26,4 +25,4 @@ const combinationSum = function (candidates, target) {
   return ans
 };
 
-console.log(combinationSum(  [2,3,5], 8))
+console.log(combinationSum([2, 3, 5], 8))

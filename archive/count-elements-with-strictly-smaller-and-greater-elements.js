@@ -18,4 +18,4 @@ const countElements = function (nums) {
   return ans
 }
 
-console.log(countElements([-51,-81,-47,10,-61,-33,45]))
+console.log(countElements([-51, -81, -47, 10, -61, -33, 45]))

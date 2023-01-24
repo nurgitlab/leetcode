@@ -1,4 +1,4 @@
-const numJewelsInStones = function(jewels, stones) {
+const numJewelsInStones = function (jewels, stones) {
   let jMem = {}
   jewels.split('').forEach(l => {
     jMem[l] = true

@@ -2,12 +2,12 @@ const fillCups = function (amount) {
   let time = 0
   while (arrSum(amount) > 0) {
     time++
-    amount.sort((a,b) => a - b)
+    amount.sort((a, b) => a - b)
     if (amount[1] > 0) {
-      amount[1]-=1
+      amount[1] -= 1
     }
     if (amount[2] > 0) {
-      amount[2]-=1
+      amount[2] -= 1
     }
   }
 

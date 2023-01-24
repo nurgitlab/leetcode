@@ -1,9 +1,9 @@
-const sortEvenOdd = function(nums) {
+const sortEvenOdd = function (nums) {
   let sled = []
   let c1 = []
   let c2 = []
 
-  nums.forEach((n,i) => {
+  nums.forEach((n, i) => {
     if (i % 2 === 0) {
       sled.push(true)
       c1.push(n)
@@ -15,8 +15,8 @@ const sortEvenOdd = function(nums) {
   let k = 0
   let l = 0
 
-  c1 = c1.sort((a,b) => a - b)
-  c2 = c2.sort((a,b) => b - a)
+  c1 = c1.sort((a, b) => a - b)
+  c2 = c2.sort((a, b) => b - a)
 
   sled.forEach((b, i) => {
     if (b) {
@@ -31,4 +31,4 @@ const sortEvenOdd = function(nums) {
   return sled
 };
 
-console.log(sortEvenOdd([36,45,32,31,15,41,9,46,36,6,15,16,33,26,27,31,44,34]))
+console.log(sortEvenOdd([36, 45, 32, 31, 15, 41, 9, 46, 36, 6, 15, 16, 33, 26, 27, 31, 44, 34]))

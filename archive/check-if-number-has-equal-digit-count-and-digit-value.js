@@ -1,4 +1,4 @@
-const digitCount = function(num) {
+const digitCount = function (num) {
   let mem = {}
   let mem2 = {}
   num.split('').forEach((el, i) => {
@@ -16,11 +16,11 @@ const digitCount = function(num) {
     if (mem2[k] === undefined) {
       ans = false
     } else {
-      mem2[k]-=mem[k]
+      mem2[k] -= mem[k]
     }
   })
   Object.keys(mem2).forEach(k => {
-    if (mem2[k]!==0) {
+    if (mem2[k] !== 0) {
       ans = false
     }
   })

@@ -10,10 +10,11 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var averageOfLevels = function(root) {
+var averageOfLevels = function (root) {
   let mem = {}
+
   function goToNext(node, s) {
-    if (node!==null) {
+    if (node !== null) {
       s++
       if (mem[s] === undefined) {
         mem[s] = []
@@ -23,17 +24,18 @@ var averageOfLevels = function(root) {
       goToNext(node.right, s)
     }
   }
+
   goToNext(root, 0)
   console.log(mem)
   let arr = []
 
   Object.keys(mem).forEach(k => {
     let sum = 0
-    mem[k].forEach(el => sum+=el)
-    arr.push([k, sum/mem[k].length])
+    mem[k].forEach(el => sum += el)
+    arr.push([k, sum / mem[k].length])
   })
 
-  arr.sort((a,b) => a[0] - b[0])
+  arr.sort((a, b) => a[0] - b[0])
 
   arr = arr.map(el => el[1])
 

@@ -1,3 +1,3 @@
-const removeNthFromEnd = function(head, n) {
+const removeNthFromEnd = function (head, n) {
 
 }

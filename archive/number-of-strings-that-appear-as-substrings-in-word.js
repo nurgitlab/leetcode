@@ -1,4 +1,4 @@
-const numOfStrings = function(patterns, word) {
+const numOfStrings = function (patterns, word) {
   let ans = 0
   patterns.forEach(el => {
     if (word.length !== word.split(el).join('').length) {
@@ -9,4 +9,4 @@ const numOfStrings = function(patterns, word) {
   return ans
 }
 
-console.log(numOfStrings(["a","abc","bc","d"], "abc"))
+console.log(numOfStrings(["a", "abc", "bc", "d"], "abc"))

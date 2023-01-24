@@ -23,7 +23,9 @@ const addToArrayForm = function (num, k) {
     }
   }
 
-  if (reg > 0) {ans+=1}
+  if (reg > 0) {
+    ans += 1
+  }
 
   ans = ans.split('').reverse()
   let r = ans.map(el => {
@@ -32,4 +34,4 @@ const addToArrayForm = function (num, k) {
   return r
 };
 
-console.log(addToArrayForm([2,7,4], 181))
+console.log(addToArrayForm([2, 7, 4], 181))

@@ -10,10 +10,10 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const sumRootToLeaf = function(root) {
+const sumRootToLeaf = function (root) {
   let b = []
 
-  function goToLists (arr, mem) {
+  function goToLists(arr, mem) {
     if (arr.val !== null) {
       if (arr.right !== null) {
         goToLists(arr.right, [...mem, arr.val])
@@ -34,16 +34,16 @@ const sumRootToLeaf = function(root) {
   return to10(b)
 }
 
-function to10 (arr) {
+function to10(arr) {
   let sum = 0
   arr.forEach(n => {
     let a = n.split('')
     let s = 0
-    for (let i = a.length - 1; i>=0; i--) {
-      s+=a[i] * Math.pow(2, a.length - 1 - i)
+    for (let i = a.length - 1; i >= 0; i--) {
+      s += a[i] * Math.pow(2, a.length - 1 - i)
     }
 
-    sum+=s
+    sum += s
   })
 
   return sum

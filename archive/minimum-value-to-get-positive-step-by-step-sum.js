@@ -2,7 +2,7 @@ const minStartValue = function (nums) {
   nums = [0, ...nums]
   let min = Infinity
   for (let i = 1; i < nums.length; i++) {
-    nums[i]+= nums[i - 1]
+    nums[i] += nums[i - 1]
     min = Math.min(min, nums[i])
   }
 

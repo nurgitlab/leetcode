@@ -9,7 +9,7 @@ const sumZero = function (n) {
       ans.push(i)
     }
   } else {
-    let n2 = Math.floor(n/2)
+    let n2 = Math.floor(n / 2)
     for (let i = n2; i > 0; i--) {
       ans.push(-i)
     }

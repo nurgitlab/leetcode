@@ -1,8 +1,11 @@
-const mergeKLists = function(lists) {
+const mergeKLists = function (lists) {
   let mem = {}
   let r
-  function goToNext (node, i) {
-    if (mem[i] === undefined) {mem[i] = []}
+
+  function goToNext(node, i) {
+    if (mem[i] === undefined) {
+      mem[i] = []
+    }
     if (node !== null) {
       mem[i].push(node.val)
     }
@@ -43,14 +46,14 @@ const mergeKLists = function(lists) {
   return r === undefined ? null : r
 };
 
-function merge (lists) {
+function merge(lists) {
   let arrs = []
   let memk = []
 
   let n = 0
 
-  for (let i= 0; i < lists.length; i++) {
-    n+=lists[i].length
+  for (let i = 0; i < lists.length; i++) {
+    n += lists[i].length
     arrs.push(lists)
     memk.push(0)
   }
@@ -61,7 +64,7 @@ function merge (lists) {
     let minInd = -1
 
     for (let j = 0; j < lists.length; j++) {
-      if (lists[j][memk[j]]!== undefined) {
+      if (lists[j][memk[j]] !== undefined) {
         if (lists[j][memk[j]] < min) {
           min = lists[j][memk[j]]
           minInd = j

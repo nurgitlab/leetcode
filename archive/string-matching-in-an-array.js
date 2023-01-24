@@ -1,4 +1,4 @@
-const stringMatching = function(words) {
+const stringMatching = function (words) {
   let ans = []
   for (let i = 0; i < words.length; i++) {
     for (let j = 0; j < words.length; j++) {
@@ -13,5 +13,5 @@ const stringMatching = function(words) {
   return ans
 };
 
-console.log(stringMatching(["leetcode","et","code"]))
+console.log(stringMatching(["leetcode", "et", "code"]))
 

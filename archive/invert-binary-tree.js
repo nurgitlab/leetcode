@@ -10,9 +10,9 @@
  * @param {TreeNode} root
  * @return {TreeNode}
  */
-var invertTree = function(root) {
-  function goTo (node) {
-    if (node!==null) {
+var invertTree = function (root) {
+  function goTo(node) {
+    if (node !== null) {
       let mem = null
       if (node.left !== null) {
         mem = {...node.left}

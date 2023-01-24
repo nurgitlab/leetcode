@@ -10,13 +10,14 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var countNodes = function(root) {
+var countNodes = function (root) {
   let ans = 0
-  function goToNextNode (tree) {
+
+  function goToNextNode(tree) {
     if (tree.val === null) {
-      ans+=0
+      ans += 0
     } else {
-      ans+=1
+      ans += 1
 
       if (tree.left !== null) {
         goToNextNode(tree.left)
@@ -27,7 +28,10 @@ var countNodes = function(root) {
       }
     }
   }
-  if (root === null) {return 0}
+
+  if (root === null) {
+    return 0
+  }
   goToNextNode(root)
 
   return ans

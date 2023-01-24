@@ -4,14 +4,22 @@ const halvesAreAlike = function (s) {
 
   let sum = 0
   s1.split('').forEach(l => {
-    if (isVowel(l)) {sum++}
+    if (isVowel(l)) {
+      sum++
+    }
   })
 
   s2.split('').forEach(l => {
-    if (isVowel(l)) {sum--}
+    if (isVowel(l)) {
+      sum--
+    }
   })
 
-  if (sum === 0) {return true} else {return  false}
+  if (sum === 0) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function isVowel(l) {

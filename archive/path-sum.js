@@ -11,14 +11,17 @@
  * @param {number} targetSum
  * @return {boolean}
  */
-var hasPathSum = function(root, targetSum) {
+var hasPathSum = function (root, targetSum) {
   let ans = false
-  function goTo (node, sum) {
-    if (node!== null && !ans) {
-      sum+=node.val
+
+  function goTo(node, sum) {
+    if (node !== null && !ans) {
+      sum += node.val
 
       if (node.left === null && node.right === null) {
-        if (sum === targetSum) {ans = true}
+        if (sum === targetSum) {
+          ans = true
+        }
       }
 
       goTo(node.left, sum)

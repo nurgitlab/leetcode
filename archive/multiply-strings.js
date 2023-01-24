@@ -6,7 +6,7 @@ const multiply = function (num1, num2) {
   for (let i = num2.length - 1; i >= 0; i--) {
     nums.push(multiplyNumber(num1, num2[i]) + nulls)
 
-    nulls+='0'
+    nulls += '0'
   }
 
   let total = '0'
@@ -18,30 +18,36 @@ const multiply = function (num1, num2) {
   let ans = ''
   let ved = true
   for (let i = 0; i < total.length; i++) {
-    if (ved && total[i] === '0') {continue} else {
+    if (ved && total[i] === '0') {
+      continue
+    } else {
       ved = false
-      ans+=total[i]
+      ans += total[i]
     }
   }
-  if (ans.length === 0) {ans = '0'}
+  if (ans.length === 0) {
+    ans = '0'
+  }
   return ans
 }
 
-function multiplyNumber (n, k) {
+function multiplyNumber(n, k) {
   let ans = ''
   let mem = 0
   for (let i = n.length - 1; i >= 0; i--) {
     let c = Number(n[i]) * Number(k) + mem
     if (c > 9) {
-      ans+=c % 10
+      ans += c % 10
       mem = Math.floor(c / 10)
     } else {
-      ans+=c
+      ans += c
       mem = 0
     }
   }
 
-  if (mem > 0) {ans+=mem}
+  if (mem > 0) {
+    ans += mem
+  }
 
   return ans.split('').reverse().join('')
 }
@@ -83,7 +89,7 @@ function sum(n1, n2) {
   }
 
   if (mem > 0) {
-    ans+='1'
+    ans += '1'
   }
 
   return ans.split('').reverse().join('')

@@ -1,4 +1,4 @@
-const reverseVowels = function(s) {
+const reverseVowels = function (s) {
   let arr = []
 
   for (let i = 0; i < s.length; i++) {
@@ -22,7 +22,7 @@ const reverseVowels = function(s) {
   return s.join('')
 }
 
-function isGl (letter) {
+function isGl(letter) {
   if (
     letter === 'a' ||
     letter === 'e' ||

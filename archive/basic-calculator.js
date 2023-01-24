@@ -21,15 +21,18 @@ function solveWithout(str) {
       nums.push(Number(local))
       local = ''
     } else {
-      local+=deletedSpaces[i]
+      local += deletedSpaces[i]
     }
   }
 
-  if (local.length > 0) {nums.push(Number(local))}
+  if (local.length > 0) {
+    nums.push(Number(local))
+  }
 
   let m = 0
   nums.forEach(n => {
-    if (operations[m] === '+') {}
+    if (operations[m] === '+') {
+    }
     m++
   })
   return nums

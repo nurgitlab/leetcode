@@ -1,4 +1,4 @@
-const findRestaurant = function(list1, list2) {
+const findRestaurant = function (list1, list2) {
   let mem = {}
   list1.forEach((el, i) => {
     mem[el] = i
@@ -17,12 +17,14 @@ const findRestaurant = function(list1, list2) {
   let rAns = []
 
   Object.keys(ans).forEach(k => {
-    if (ans[k] === rast) {rAns.push(k)}
+    if (ans[k] === rast) {
+      rAns.push(k)
+    }
   })
 
   return rAns
 }
 
 console.log(findRestaurant(
-  ["Shogun","Tapioca Express","Burger King","KFC"], ["KFC","Shogun","Burger King"]
+  ["Shogun", "Tapioca Express", "Burger King", "KFC"], ["KFC", "Shogun", "Burger King"]
 ))

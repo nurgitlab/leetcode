@@ -1,6 +1,7 @@
-const allPathsSourceTarget = function(graph) {
+const allPathsSourceTarget = function (graph) {
   let mem = new Set()
-  function goToNextNode (checkedNodes, currentNode, route) {
+
+  function goToNextNode(checkedNodes, currentNode, route) {
     if (currentNode === graph.length - 1) {
       mem.add(String(route))
     } else {
@@ -8,7 +9,7 @@ const allPathsSourceTarget = function(graph) {
         if (checkedNodes[graph[currentNode][i]] === undefined) {
           let copyCheckedNodes = {...checkedNodes}
           copyCheckedNodes[graph[currentNode][i]] = true
-          goToNextNode(copyCheckedNodes, graph[currentNode][i], [...route,graph[currentNode][i]])
+          goToNextNode(copyCheckedNodes, graph[currentNode][i], [...route, graph[currentNode][i]])
         }
       }
     }
@@ -26,4 +27,4 @@ const allPathsSourceTarget = function(graph) {
   return ans
 }
 
-console.log(allPathsSourceTarget([[4,3,1],[3,2,4],[3],[4],[]]))
+console.log(allPathsSourceTarget([[4, 3, 1], [3, 2, 4], [3], [4], []]))

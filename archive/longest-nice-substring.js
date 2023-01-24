@@ -4,7 +4,7 @@ const longestNiceSubstring = function (s) {
   for (let i = 0; i < s.length; i++) {
     let str = ''
     for (let j = i; j < s.length; j++) {
-      str+=s[j]
+      str += s[j]
       if (isNice(str) && str.length > mem.length) {
         mem = str
       }
@@ -35,4 +35,5 @@ function isNice(str) {
 
   return ans
 }
+
 console.log(longestNiceSubstring("YazaAay"))

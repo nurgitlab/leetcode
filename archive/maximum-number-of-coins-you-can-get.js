@@ -9,7 +9,7 @@ const maxCoins = function (piles) {
   return ans
 }
 
-console.log(maxCoins([2,4,1,2,7,8]))
+console.log(maxCoins([2, 4, 1, 2, 7, 8]))
 
 // 8   2 3 4 5 6 7
 //8 + 6   3 4 5

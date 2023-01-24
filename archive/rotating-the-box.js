@@ -18,7 +18,7 @@ const rotateTheBox = function (box) {
 
   for (let j = 0; j < box[0].length; j++) {
     let s = []
-    for (let i = box.length - 1; i >=0 ; i--) {
+    for (let i = box.length - 1; i >= 0; i--) {
       s.push(box[i][j])
     }
     ans.push(s)
@@ -26,6 +26,6 @@ const rotateTheBox = function (box) {
   return ans
 };
 
-console.log(rotateTheBox([["#","#","*",".","*","."],
-  ["#","#","#","*",".","."],
-  ["#","#","#",".","#","."]]))
+console.log(rotateTheBox([["#", "#", "*", ".", "*", "."],
+  ["#", "#", "#", "*", ".", "."],
+  ["#", "#", "#", ".", "#", "."]]))

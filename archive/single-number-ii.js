@@ -1,4 +1,4 @@
-const singleNumber = function(nums) {
+const singleNumber = function (nums) {
   const mem = {}
   nums.forEach(el => {
     if (mem[el] === undefined) {
@@ -19,4 +19,4 @@ const singleNumber = function(nums) {
   return ans
 };
 
-console.log(singleNumber([2,2,3,2]))
+console.log(singleNumber([2, 2, 3, 2]))

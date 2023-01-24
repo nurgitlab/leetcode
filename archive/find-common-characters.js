@@ -39,4 +39,4 @@ const commonChars = function (words) {
   return ans
 }
 
-console.log(commonChars(["bella","label","roller"]))
+console.log(commonChars(["bella", "label", "roller"]))

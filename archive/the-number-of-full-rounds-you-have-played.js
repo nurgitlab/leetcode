@@ -23,4 +23,4 @@ function toAbsoluteTime(str) {
 }
 
 console.log(numberOfRounds("21:30",
-"03:00"))
+  "03:00"))

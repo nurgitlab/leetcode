@@ -1,10 +1,10 @@
-const findMaxK = function(nums) {
+const findMaxK = function (nums) {
   let negative = new Set()
   let mem = {}
   nums.forEach(el => {
     if (el < 0) {
       negative.add(el)
-      if (mem[-el]!==undefined) {
+      if (mem[-el] !== undefined) {
         mem[-el] = true
       }
     } else {
@@ -12,7 +12,7 @@ const findMaxK = function(nums) {
         mem[el] = false
       }
 
-      if (negative.has(-el) ){
+      if (negative.has(-el)) {
         mem[el] = true
       }
     }
@@ -29,4 +29,4 @@ const findMaxK = function(nums) {
   return max
 }
 
-console.log(findMaxK([-1,10,6,7,-7,1]))
+console.log(findMaxK([-1, 10, 6, 7, -7, 1]))

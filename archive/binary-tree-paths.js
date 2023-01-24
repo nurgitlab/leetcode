@@ -10,17 +10,17 @@
  * @param {TreeNode} root
  * @return {string[]}
  */
-var binaryTreePaths = function(root) {
+var binaryTreePaths = function (root) {
   let ans = []
 
-  function goTo (node, road) {
-    if (node!==null) {
+  function goTo(node, road) {
+    if (node !== null) {
       road = [...road, node.val]
       if (node.left === null && node.right === null) {
         ans.push(road.join('->'))
       }
       goTo(node.left, road)
-      goTo(node.right,road)
+      goTo(node.right, road)
     }
   }
 

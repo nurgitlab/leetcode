@@ -4,9 +4,9 @@ var numberOfSteps = function (num) {
     if (num % 2 === 0) {
       num /= 2
     } else {
-      num-=1
+      num -= 1
     }
-    steps+=1
+    steps += 1
   }
 
   return steps

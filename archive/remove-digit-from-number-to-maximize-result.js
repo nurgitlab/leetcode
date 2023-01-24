@@ -24,7 +24,7 @@ const removeDigit = function (number, digit) {
   return `${ans}`
 }
 
-function bigger (l1,l2) {
+function bigger(l1, l2) {
   if (l1.length > l2.length) {
     return l1
   } else if (l1.length < l2.length) {

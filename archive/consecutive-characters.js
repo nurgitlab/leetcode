@@ -1,4 +1,4 @@
-const maxPower = function(s) {
+const maxPower = function (s) {
   let max = 1
   let m = 1
   for (let i = 0; i < s.length; i++) {

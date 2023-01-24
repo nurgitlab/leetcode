@@ -23,9 +23,9 @@ const maxDistance = function (colors) {
       }
       let mem2 = r - k
       if (mem1 < mem2) {
-        l+=mem1
+        l += mem1
       } else {
-        r-=mem2
+        r -= mem2
       }
     } else {
       if (r - l > ans) {
@@ -39,4 +39,4 @@ const maxDistance = function (colors) {
   return ans
 };
 
-console.log(maxDistance([6,6,6,6,6,6,6,6,6,19,19,6,6]))
+console.log(maxDistance([6, 6, 6, 6, 6, 6, 6, 6, 6, 19, 19, 6, 6]))

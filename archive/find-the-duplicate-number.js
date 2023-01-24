@@ -1,4 +1,4 @@
-const findDuplicate = function(nums) {
+const findDuplicate = function (nums) {
   let mem = {}
   let ans
   for (let i = 0; i < nums.length; i++) {
@@ -13,4 +13,4 @@ const findDuplicate = function(nums) {
   return ans
 };
 
-console.log(findDuplicate([1,3,4,2,2]))
+console.log(findDuplicate([1, 3, 4, 2, 2]))

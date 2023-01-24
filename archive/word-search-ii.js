@@ -1,4 +1,4 @@
-const findWords = function(board, words) {
+const findWords = function (board, words) {
   let set = new Set(words)
   let a = [...set]
 
@@ -8,18 +8,20 @@ const findWords = function(board, words) {
     let w = a[i]
     let m = ''
     for (let j = 0; j < w.length; j++) {
-      m+=w[j]
+      m += w[j]
       checkSet.add(m)
     }
   }
   let ansSet = new Set()
 
-  function goTo (word, prevPos, currentPos) {
+  function goTo(word, prevPos, currentPos) {
     let [x, y] = currentPos
-    word+=board[x][y]
+    word += board[x][y]
 
     if (checkSet.has(word)) {
-      if (set.has(word)) {ansSet.add(word)}
+      if (set.has(word)) {
+        ansSet.add(word)
+      }
 
       if (isValid(board, prevPos, [x + 1, y])) {
         goTo(word, [...prevPos, `${x}-${y}`], [x + 1, y])
@@ -41,7 +43,7 @@ const findWords = function(board, words) {
 
   for (let i = 0; i < board.length; i++) {
     for (let j = 0; j < board[i].length; j++) {
-      goTo('', [], [i,j])
+      goTo('', [], [i, j])
     }
   }
 
@@ -50,7 +52,7 @@ const findWords = function(board, words) {
 
 
 function isValid(board, prevPos, newPos) {
-  let [x,y] = newPos
+  let [x, y] = newPos
 
   if (x >= 0 && x < board.length) {
     if (y >= 0 && y < board[0].length) {

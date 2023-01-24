@@ -1,4 +1,4 @@
-const distinctAverages = function(nums) {
+const distinctAverages = function (nums) {
   let set = new Set()
   while (nums.length > 0) {
     let min = Infinity
@@ -19,7 +19,7 @@ const distinctAverages = function(nums) {
       }
     })
 
-    nums = nums.filter((_, i) => i!==maxIndex && i!==minIndex)
+    nums = nums.filter((_, i) => i !== maxIndex && i !== minIndex)
 
     set.add((max + min) / 2)
   }
@@ -27,4 +27,4 @@ const distinctAverages = function(nums) {
   return set.size
 }
 
-console.log(distinctAverages([1,100]))
+console.log(distinctAverages([1, 100]))

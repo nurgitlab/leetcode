@@ -1,8 +1,10 @@
-const minOperations = function(logs) {
+const minOperations = function (logs) {
   let ans = 0
   logs.forEach(el => {
     if (el === '../') {
-      if (ans > 0) {ans--}
+      if (ans > 0) {
+        ans--
+      }
     } else if (el !== './') {
       ans++
     }
@@ -11,4 +13,4 @@ const minOperations = function(logs) {
   return ans
 }
 
-console.log(minOperations(["d1/","d2/","../","d21/","./"]))
+console.log(minOperations(["d1/", "d2/", "../", "d21/", "./"]))

@@ -1,4 +1,4 @@
-const findMaxConsecutiveOnes = function(nums) {
+const findMaxConsecutiveOnes = function (nums) {
   let max = 0
   let mem = 0
 
@@ -15,4 +15,4 @@ const findMaxConsecutiveOnes = function(nums) {
   return max
 }
 
-console.log(findMaxConsecutiveOnes([1,0,1,1,0,1]))
+console.log(findMaxConsecutiveOnes([1, 0, 1, 1, 0, 1]))

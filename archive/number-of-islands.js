@@ -9,6 +9,7 @@ const numIslands = function (grid) {
   }
 
   let numOfIsland = 0
+
   function rec(x, y) {
     grid[x][y] = '0'
     if (grid[x + 1][y] === '1') {
@@ -39,8 +40,8 @@ const numIslands = function (grid) {
 
 
 console.log(numIslands([
-  ["1","1","0","0","0"],
-  ["1","1","0","0","0"],
-  ["0","0","1","0","0"],
-  ["0","0","0","1","1"]
+  ["1", "1", "0", "0", "0"],
+  ["1", "1", "0", "0", "0"],
+  ["0", "0", "1", "0", "0"],
+  ["0", "0", "0", "1", "1"]
 ]))

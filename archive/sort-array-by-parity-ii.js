@@ -1,4 +1,4 @@
-const sortArrayByParityII = function(nums) {
+const sortArrayByParityII = function (nums) {
   let c1 = []
   let c2 = []
 
@@ -26,4 +26,4 @@ const sortArrayByParityII = function(nums) {
   return nums
 };
 
-console.log(sortArrayByParityII( [4,2,5,7]))
+console.log(sortArrayByParityII([4, 2, 5, 7]))

@@ -19,7 +19,7 @@ const displayTable = function (orders) {
   })
 
   tables = [...tables].sort((a, b) => a - b)
-  dishes = [...dishes].sort((a,b) => sortTwoWords(a,b))
+  dishes = [...dishes].sort((a, b) => sortTwoWords(a, b))
 
   let ans = [['Table', ...dishes]]
 
@@ -38,7 +38,7 @@ const displayTable = function (orders) {
   return ans
 }
 
-function sortTwoWords (word1, word2) {
+function sortTwoWords(word1, word2) {
   word1 = word1.split('')
   word2 = word2.split('')
   for (let i = 0; i < Math.min(word1.length, word2.length); i++) {
@@ -52,6 +52,6 @@ function sortTwoWords (word1, word2) {
   return word1.length - word2.length
 }
 
-console.log(sortTwoWords( 'roVR', 'rkC'))
+console.log(sortTwoWords('roVR', 'rkC'))
 
 console.log(displayTable([["David", "3", "Ceviche"], ["Corina", "10", "Beef Burrito"], ["David", "3", "Fried Chicken"], ["Carla", "5", "Water"], ["Carla", "5", "Ceviche"], ["Rous", "3", "Ceviche"]]))

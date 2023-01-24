@@ -12,4 +12,4 @@ const minCostToMoveChips = function (position) {
   return Math.min(d1, d2)
 }
 
-console.log(minCostToMoveChips([1,2,3]))
+console.log(minCostToMoveChips([1, 2, 3]))

@@ -1,8 +1,8 @@
-const isPalindrome = function(head) {
+const isPalindrome = function (head) {
   let ans = []
 
   function go(node) {
-    if (node!==null) {
+    if (node !== null) {
       ans.push(node.val)
       go(node.next)
     }

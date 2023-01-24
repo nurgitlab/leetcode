@@ -2,10 +2,12 @@ const isPrefixOfWord = function (sentence, searchWord) {
   sentence = sentence.split(' ')
   let ans = -1
   for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i].length < searchWord.length) {continue} else {
+    if (sentence[i].length < searchWord.length) {
+      continue
+    } else {
       let mem = ''
       for (let j = 0; j < searchWord.length; j++) {
-        mem+=sentence[i][j]
+        mem += sentence[i][j]
       }
 
       if (mem === searchWord) {

@@ -8,7 +8,7 @@ const arrayRankTransform = function (arr) {
   let mem = {}
   arrWithIndex.forEach((el, i) => {
     el[1] = i + 1
-    mem[el[0]] = i+1
+    mem[el[0]] = i + 1
   })
 
   arr.forEach((el, i) => {

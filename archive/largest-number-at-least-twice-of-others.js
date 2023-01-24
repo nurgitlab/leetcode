@@ -1,4 +1,4 @@
-const dominantIndex = function(nums) {
+const dominantIndex = function (nums) {
   let max = [-Infinity, undefined]
 
   nums.forEach((el, i) => {
@@ -18,4 +18,4 @@ const dominantIndex = function(nums) {
   return max[1]
 };
 
-console.log(dominantIndex([1,2,3,4]))
+console.log(dominantIndex([1, 2, 3, 4]))

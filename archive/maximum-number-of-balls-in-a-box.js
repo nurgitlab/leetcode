@@ -1,7 +1,7 @@
-const countBalls = function(lowLimit, highLimit) {
+const countBalls = function (lowLimit, highLimit) {
   let mem = {}
   let max = -Infinity
-  for (let i = lowLimit; i<= highLimit; i++) {
+  for (let i = lowLimit; i <= highLimit; i++) {
     if (mem[sumOfDigits(i)] === undefined) {
       mem[sumOfDigits(i)] = 0
     }
@@ -12,10 +12,10 @@ const countBalls = function(lowLimit, highLimit) {
   return max
 }
 
-function sumOfDigits (el) {
+function sumOfDigits(el) {
   let ans = 0
   String(el).split('').forEach(c => {
-    ans+=Number(c)
+    ans += Number(c)
   })
 
   return ans

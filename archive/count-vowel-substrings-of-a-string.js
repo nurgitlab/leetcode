@@ -5,13 +5,13 @@ const countVowelSubstrings = function (word) {
     let str = ''
     for (let j = i; j < word.length; j++) {
       if (
-        word[j]==='a' ||
-        word[j]==='e' ||
-        word[j]==='i' ||
-        word[j]==='o' ||
-        word[j]==='u'
+        word[j] === 'a' ||
+        word[j] === 'e' ||
+        word[j] === 'i' ||
+        word[j] === 'o' ||
+        word[j] === 'u'
       ) {
-        str+=word[j]
+        str += word[j]
         if (isCorrect(str)) {
           ans++
         }

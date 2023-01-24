@@ -1,4 +1,4 @@
-const maxWidthOfVerticalArea = function(points) {
+const maxWidthOfVerticalArea = function (points) {
   points.sort(([x], [y]) => x - y)
   let ans = 0
   for (let i = 0; i < points.length - 1; i++) {
@@ -8,4 +8,4 @@ const maxWidthOfVerticalArea = function(points) {
   return ans
 }
 
-console.log(maxWidthOfVerticalArea([[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]))
+console.log(maxWidthOfVerticalArea([[3, 1], [9, 0], [1, 0], [1, 4], [5, 3], [8, 8]]))

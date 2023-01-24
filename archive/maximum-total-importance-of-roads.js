@@ -1,9 +1,13 @@
-const maximumImportance = function(n, roads) {
+const maximumImportance = function (n, roads) {
   let mem = {}
   let rc = [...roads]
-  roads.forEach(([a,b]) => {
-    if (mem[a] === undefined) {mem[a] = 0}
-    if (mem[b] === undefined) {mem[b] = 0}
+  roads.forEach(([a, b]) => {
+    if (mem[a] === undefined) {
+      mem[a] = 0
+    }
+    if (mem[b] === undefined) {
+      mem[b] = 0
+    }
 
     mem[a]++
     mem[b]++
@@ -14,7 +18,7 @@ const maximumImportance = function(n, roads) {
     arr.push([Number(k), mem[k]])
   })
 
-  arr.sort((a,b) => a[1] - b[1])
+  arr.sort((a, b) => a[1] - b[1])
 
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i])
@@ -27,10 +31,10 @@ const maximumImportance = function(n, roads) {
 
   let ans = 0
 
-  rc.forEach(([a,b]) => {
-    ans+=mem2[a] + mem2[b]
+  rc.forEach(([a, b]) => {
+    ans += mem2[a] + mem2[b]
   })
   return ans
 }
 
-console.log(maximumImportance(5, [[0,1],[1,2],[2,3],[0,2],[1,3],[2,4]]))
+console.log(maximumImportance(5, [[0, 1], [1, 2], [2, 3], [0, 2], [1, 3], [2, 4]]))

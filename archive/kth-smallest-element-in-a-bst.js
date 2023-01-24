@@ -1,6 +1,7 @@
-const kthSmallest = function(root, k) {
+const kthSmallest = function (root, k) {
   let set = new Set()
-  function toNextList (arr) {
+
+  function toNextList(arr) {
     if (arr.val !== null) {
       set.add(arr.val)
 
@@ -18,7 +19,7 @@ const kthSmallest = function(root, k) {
 
   let arr = [...set]
 
-  arr.sort((a,b) => a - b)
+  arr.sort((a, b) => a - b)
 
   return arr[k - 1]
 }

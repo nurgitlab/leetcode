@@ -1,4 +1,4 @@
-const sumOfUnique = function(nums) {
+const sumOfUnique = function (nums) {
   const mem = {}
 
   nums.forEach(n => {
@@ -13,11 +13,11 @@ const sumOfUnique = function(nums) {
 
   Object.keys(mem).forEach(n => {
     if (mem[n] === 1) {
-      ans+=Number(n)
+      ans += Number(n)
     }
   })
 
   return ans
 };
 
-console.log(sumOfUnique([1,2,3,2]))
+console.log(sumOfUnique([1, 2, 3, 2]))

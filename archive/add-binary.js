@@ -19,14 +19,16 @@ const addBinary = function (a, b) {
   for (let i = str2.length - 1; i >= 0; i--) {
     let s = Number(str2[i]) + Number(str1[i]) + reg
     if (s === 1 || s === 0) {
-      ans+=s
+      ans += s
       reg = 0
     } else {
-      ans+= s % 2
+      ans += s % 2
       reg = 1
     }
   }
 
-  if (reg === 1) {ans+=reg}
+  if (reg === 1) {
+    ans += reg
+  }
   return ans.split('').reverse().join('')
 };

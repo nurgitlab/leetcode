@@ -1,4 +1,4 @@
-const canReach = function(arr, start) {
+const canReach = function (arr, start) {
   let mem = []
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 0) {
@@ -7,11 +7,11 @@ const canReach = function(arr, start) {
     arr[i] = [arr[i], false]
   }
 
-  function correctId (id) {
-      return id >= 0 && id <arr.length
+  function correctId(id) {
+    return id >= 0 && id < arr.length
   }
 
-  function goToNextElement (id) {
+  function goToNextElement(id) {
     arr[id][1] = true
     let dist = arr[id][0]
     if (correctId(id + dist)) {
@@ -30,10 +30,10 @@ const canReach = function(arr, start) {
   goToNextElement(start)
   let ans = false
   for (let i = 0; i < mem.length; i++) {
-    ans||=arr[mem[i]][1]
+    ans ||= arr[mem[i]][1]
   }
 
   return ans
 };
 
-console.log(canReach([4,2,3,0, 0, 0, 3,1,2], 5))
+console.log(canReach([4, 2, 3, 0, 0, 0, 3, 1, 2], 5))

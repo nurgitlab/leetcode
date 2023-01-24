@@ -1,4 +1,4 @@
-const maxProductDifference = function(nums) {
+const maxProductDifference = function (nums) {
   let maxEl = -Infinity
   let minEl = Infinity
 
@@ -27,4 +27,4 @@ const maxProductDifference = function(nums) {
   return Math.abs(prevMin * minEl - maxEl * prevMax)
 };
 
-console.log(maxProductDifference([4,2,5,9,7,4,8]))
+console.log(maxProductDifference([4, 2, 5, 9, 7, 4, 8]))

@@ -1,9 +1,9 @@
-const findSpecialInteger = function(arr) {
+const findSpecialInteger = function (arr) {
   const n = arr.length
   let mem = {}
 
   for (let i = 0; i < n; i++) {
-    if (mem[arr[i]]===undefined) {
+    if (mem[arr[i]] === undefined) {
       mem[arr[i]] = 1
     } else {
       mem[arr[i]]++
@@ -16,7 +16,7 @@ const findSpecialInteger = function(arr) {
   let cor = n / 4
   Object.keys(mem).forEach(k => {
     let c = mem[k]
-    if (c>=cor) {
+    if (c >= cor) {
       ans = k
     }
   })
@@ -24,4 +24,4 @@ const findSpecialInteger = function(arr) {
   return ans
 };
 
-console.log(findSpecialInteger([5668,5668,5668,5668,22011]))
+console.log(findSpecialInteger([5668, 5668, 5668, 5668, 22011]))

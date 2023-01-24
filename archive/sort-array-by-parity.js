@@ -1,4 +1,4 @@
-const sortArrayByParity = function(nums) {
+const sortArrayByParity = function (nums) {
   let a1 = []
   let a2 = []
 

@@ -1,4 +1,4 @@
-const prefixCount = function(words, pref) {
+const prefixCount = function (words, pref) {
   let ans = 0
 
   words.forEach(word => {
@@ -9,11 +9,13 @@ const prefixCount = function(words, pref) {
         mem += word[i]
       }
 
-      if (mem === pref) {ans++}
+      if (mem === pref) {
+        ans++
+      }
     }
   })
 
   return ans
 };
 
-console.log(prefixCount(["pay","attention","practice","attend"], "at"))
+console.log(prefixCount(["pay", "attention", "practice", "attend"], "at"))

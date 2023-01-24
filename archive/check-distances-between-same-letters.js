@@ -1,4 +1,4 @@
-const checkDistances = function(s, distance) {
+const checkDistances = function (s, distance) {
   let mem = {}
   for (let i = 0; i < s.length; i++) {
     if (mem[s[i]] === undefined) {
@@ -26,4 +26,4 @@ const checkDistances = function(s, distance) {
 }
 
 
-console.log(checkDistances("abaccb", [1,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]))
+console.log(checkDistances("abaccb", [1, 3, 0, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]))

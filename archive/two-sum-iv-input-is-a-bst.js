@@ -1,8 +1,7 @@
-
-const findTarget = function(root, k) {
+const findTarget = function (root, k) {
   let mem = []
 
-  function goToNextNode (tree) {
+  function goToNextNode(tree) {
     if (tree.val !== null) {
       mem = [...mem, tree.val]
 
@@ -15,10 +14,11 @@ const findTarget = function(root, k) {
       }
     }
   }
+
   goToNextNode(root)
   let ans = false
   for (let i = 0; i < mem.length; i++) {
-    for (let j = 0 ; j < mem.length; j++) {
+    for (let j = 0; j < mem.length; j++) {
       if (i !== j) {
         if (mem[i] + mem[j] === k) {
           ans = true

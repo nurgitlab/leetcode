@@ -1,4 +1,4 @@
-const majorityElement = function(nums) {
+const majorityElement = function (nums) {
   let m = Math.floor(nums.length / 3) + 1
   let mem = {}
   let ans = []
@@ -20,4 +20,4 @@ const majorityElement = function(nums) {
   return ans
 };
 
-console.log(majorityElement([3,2,3]))
+console.log(majorityElement([3, 2, 3]))

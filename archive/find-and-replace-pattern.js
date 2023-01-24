@@ -35,20 +35,20 @@ function isPattern(word, pattern) {
   let ans = true
 
   Object.keys(mem).forEach(k => {
-    if (typeof mem[k]!=="string") {
+    if (typeof mem[k] !== "string") {
       ans = false
     } else {
-      if (k!== mem2[mem[k]]) {
+      if (k !== mem2[mem[k]]) {
         ans = false
       }
     }
   })
 
   Object.keys(mem2).forEach(k => {
-    if (typeof mem2[k]!=="string") {
+    if (typeof mem2[k] !== "string") {
       ans = false
     } else {
-      if (k!== mem[mem2[k]]) {
+      if (k !== mem[mem2[k]]) {
         ans = false
       }
     }

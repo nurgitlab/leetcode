@@ -10,14 +10,14 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var deepestLeavesSum = function(root) {
+var deepestLeavesSum = function (root) {
   let maxGl = 0
   let sum = 0
 
-  function goToNext (tree, gl) {
+  function goToNext(tree, gl) {
     if (tree.val !== null) {
       if (gl === maxGl) {
-        sum+=tree.val
+        sum += tree.val
       }
       if (gl > maxGl) {
         sum = tree.val

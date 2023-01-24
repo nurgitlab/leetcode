@@ -1,4 +1,4 @@
-const destCity = function(paths) {
+const destCity = function (paths) {
   let mem = {}
   let s = new Set()
   paths.forEach(arr => {
@@ -15,4 +15,4 @@ const destCity = function(paths) {
   return ans
 };
 
-console.log(destCity([["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]))
+console.log(destCity([["London", "New York"], ["New York", "Lima"], ["Lima", "Sao Paulo"]]))

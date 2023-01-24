@@ -1,4 +1,4 @@
-const maxNumberOfBalloons = function(text) {
+const maxNumberOfBalloons = function (text) {
   const mem = {
     b: 0,
     a: 0,
@@ -16,8 +16,8 @@ const maxNumberOfBalloons = function(text) {
   let ans = Math.min(
     mem['b'],
     mem['a'],
-    Math.floor(mem['l']/2),
-    Math.floor(mem['o']/2),
+    Math.floor(mem['l'] / 2),
+    Math.floor(mem['o'] / 2),
     mem['n'],
   )
   return ans

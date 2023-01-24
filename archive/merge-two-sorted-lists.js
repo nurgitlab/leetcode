@@ -10,9 +10,10 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-const mergeTwoLists = function(list1, list2) {
+const mergeTwoLists = function (list1, list2) {
   let arr1 = []
   let arr2 = []
+
   function goToNext(node, m) {
     if (node !== null) {
       if (m === 1) {
@@ -21,12 +22,11 @@ const mergeTwoLists = function(list1, list2) {
       if (m === 2) {
         arr2.push(node.val)
       }
-      if (node.next!== null) {
+      if (node.next !== null) {
         goToNext(node.next, m)
       }
     }
   }
-
 
 
   goToNext(list1, 1)
@@ -45,7 +45,7 @@ const mergeTwoLists = function(list1, list2) {
 
   let a = []
 
-  while (k<arr1.length && l <arr2.length) {
+  while (k < arr1.length && l < arr2.length) {
     if (arr1[k] < arr2[l]) {
       a.push(arr1[k])
       k++
@@ -64,24 +64,26 @@ const mergeTwoLists = function(list1, list2) {
     if (node !== null) {
       node.val = a[k]
       k++
-      if (node.next!== null) {
+      if (node.next !== null) {
         rew1(node.next)
       } else {
         node.next = list2
       }
     }
   }
+
   rew1(list1)
 
   function rew2(node) {
     if (node !== null) {
       node.val = a[k + l]
       l++
-      if (node.next!== null) {
+      if (node.next !== null) {
         rew2(node.next)
       }
     }
   }
+
   rew2(list2)
 
   return list1

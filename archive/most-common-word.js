@@ -1,11 +1,13 @@
-const mostCommonWord = function(paragraph, banned) {
+const mostCommonWord = function (paragraph, banned) {
   paragraph = paragraph.toLowerCase().replace(/[~`!@#$%^&*()+={}\[\];:\'\"<>.,\/\\\?-_]/g, ' ').split(' ')
   let set = new Set(banned)
 
   let mem = {}
   paragraph.forEach(el => {
     if (!set.has(el) && el.length > 0) {
-      if (mem[el] === undefined) {mem[el] = 1} else {
+      if (mem[el] === undefined) {
+        mem[el] = 1
+      } else {
         mem[el]++
       }
     }

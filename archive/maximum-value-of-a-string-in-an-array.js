@@ -1,4 +1,4 @@
-const maximumValue = function(strs) {
+const maximumValue = function (strs) {
   let maxVal = 0
   strs.forEach(el => {
     if (isOnlyNumbers(el)) {
@@ -11,10 +11,10 @@ const maximumValue = function(strs) {
   return maxVal
 }
 
-function isOnlyNumbers (str) {
+function isOnlyNumbers(str) {
   let ans = true
   str.split('').forEach(el => {
-    if (!(el.charCodeAt(0) >= 48 && el.charCodeAt(0) <=57)) {
+    if (!(el.charCodeAt(0) >= 48 && el.charCodeAt(0) <= 57)) {
       ans = false
     }
   })
@@ -22,4 +22,4 @@ function isOnlyNumbers (str) {
   return ans
 }
 
-console.log(maximumValue(["alic3","bob","3","4","00000"]))
+console.log(maximumValue(["alic3", "bob", "3", "4", "00000"]))

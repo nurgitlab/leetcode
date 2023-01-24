@@ -8,10 +8,14 @@ const countStudents = function (students, sandwiches) {
       } else return st
     })
     students = students.filter(el => el > -1)
-    if (prev.length === students.length) {break} else {prev = JSON.parse(JSON.stringify(students))}
+    if (prev.length === students.length) {
+      break
+    } else {
+      prev = JSON.parse(JSON.stringify(students))
+    }
   }
 
   return students.length
 }
 
-console.log(countStudents([1,1,1,0,0,1], [1,0,0,0,1,1]))
+console.log(countStudents([1, 1, 1, 0, 0, 1], [1, 0, 0, 0, 1, 1]))

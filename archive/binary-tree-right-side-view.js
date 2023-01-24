@@ -1,8 +1,11 @@
-const rightSideView = function(root) {
+const rightSideView = function (root) {
   let mem = {}
-  function go (node, s) {
-    if (node!==null) {
-      if (mem[s] === undefined) {mem[s] = []}
+
+  function go(node, s) {
+    if (node !== null) {
+      if (mem[s] === undefined) {
+        mem[s] = []
+      }
       mem[s].push(node.val)
       go(node.left, s + 1)
       go(node.right, s + 1)
@@ -19,7 +22,7 @@ const rightSideView = function(root) {
   })
 
 
-  arr.sort((a,b) => a[0] - b[0])
+  arr.sort((a, b) => a[0] - b[0])
   console.log(arr)
 
   ans = arr.map(el => {

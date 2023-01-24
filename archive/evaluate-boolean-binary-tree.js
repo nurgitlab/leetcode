@@ -10,9 +10,9 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const evaluateTree = function(root) {
-  function goToNext (node) {
-    if (node!==null) {
+const evaluateTree = function (root) {
+  function goToNext(node) {
+    if (node !== null) {
       if (node.val === 2) {
         return goToNext(node.left) || goToNext(hode.right)
       }

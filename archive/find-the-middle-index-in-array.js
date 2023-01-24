@@ -1,6 +1,6 @@
-const findMiddleIndex = function(nums) {
-  for (let i =  1; i < nums.length; i++) {
-    nums[i]+=nums[i - 1]
+const findMiddleIndex = function (nums) {
+  for (let i = 1; i < nums.length; i++) {
+    nums[i] += nums[i - 1]
   }
 
   let ans = -1
@@ -19,4 +19,4 @@ const findMiddleIndex = function(nums) {
   return ans
 }
 
-console.log(findMiddleIndex( [2,3,-1,8,4]))
+console.log(findMiddleIndex([2, 3, -1, 8, 4]))

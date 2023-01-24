@@ -21,7 +21,7 @@ const minSubsequence = function (nums) {
   for (let i = n; i < nums.length; i++) {
     ans.push(nums[i])
   }
-  return ans.sort((a,b) => b - a)
+  return ans.sort((a, b) => b - a)
 }
 
 console.log(minSubsequence([4]))

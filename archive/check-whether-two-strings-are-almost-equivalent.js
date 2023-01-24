@@ -1,4 +1,4 @@
-const checkAlmostEquivalent = function(word1, word2) {
+const checkAlmostEquivalent = function (word1, word2) {
   let mem = {}
   for (let w of word1) {
     if (mem[w] === undefined) {
@@ -27,4 +27,4 @@ const checkAlmostEquivalent = function(word1, word2) {
 }
 
 console.log(checkAlmostEquivalent("zzzyyy",
-"iiiiii"))
+  "iiiiii"))

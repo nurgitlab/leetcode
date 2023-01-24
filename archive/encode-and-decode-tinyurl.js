@@ -4,7 +4,7 @@
  * @param {string} longUrl
  * @return {string}
  */
-var encode = function(longUrl) {
+var encode = function (longUrl) {
   return longUrl
 };
 
@@ -14,7 +14,7 @@ var encode = function(longUrl) {
  * @param {string} shortUrl
  * @return {string}
  */
-var decode = function(shortUrl) {
+var decode = function (shortUrl) {
   return shortUrl
 };
 

@@ -43,4 +43,4 @@ const minPathSum = function (grid) {
   return mem[n][m]
 };
 
-console.log(minPathSum([[1,2],[5,6],[1,1]]))
+console.log(minPathSum([[1, 2], [5, 6], [1, 1]]))

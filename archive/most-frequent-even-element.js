@@ -1,4 +1,4 @@
-const mostFrequentEven = function(nums) {
+const mostFrequentEven = function (nums) {
   let mem = {}
   let max = 0
   nums.forEach(n => {
@@ -8,7 +8,9 @@ const mostFrequentEven = function(nums) {
       } else {
         mem[n]++
       }
-      if (max < mem[n]) {max = mem[n]}
+      if (max < mem[n]) {
+        max = mem[n]
+      }
     }
   })
 
@@ -19,7 +21,7 @@ const mostFrequentEven = function(nums) {
     }
   })
 
-  ans.sort((a,b) => a-b)
+  ans.sort((a, b) => a - b)
 
   if (ans.length === 0) {
     return -1

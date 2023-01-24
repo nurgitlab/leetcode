@@ -1,6 +1,6 @@
-const shiftGrid = function(grid, k) {
+const shiftGrid = function (grid, k) {
   let mem = []
-  k%=grid.length * grid[0].length
+  k %= grid.length * grid[0].length
   for (let i = 0; i < grid.length; i++) {
     for (let j = 0; j < grid[i].length; j++) {
       mem.push(grid[i][j])

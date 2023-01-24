@@ -10,7 +10,7 @@ const matrixBlockSum = function (mat, k) {
           if ((r >= 0 && r < mat.length) && (
             c >= 0 && c < mat[i].length
           )) {
-            ls+=mat[r][c]
+            ls += mat[r][c]
           }
         }
       }
@@ -22,4 +22,4 @@ const matrixBlockSum = function (mat, k) {
   return ans
 };
 
-console.log(matrixBlockSum([[1,2,3],[4,5,6],[7,8,9]], 2))
+console.log(matrixBlockSum([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 2))

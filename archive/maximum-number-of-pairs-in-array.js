@@ -1,4 +1,4 @@
-const numberOfPairs = function(nums) {
+const numberOfPairs = function (nums) {
   const mem = {}
 
   nums.forEach(n => {
@@ -10,11 +10,11 @@ const numberOfPairs = function(nums) {
   })
   let ans = [0, 0]
   Object.keys(mem).forEach(k => {
-    ans[1]+=mem[k]%2
-    ans[0]+=Math.floor(mem[k]/2)
+    ans[1] += mem[k] % 2
+    ans[0] += Math.floor(mem[k] / 2)
   })
 
   return ans
 };
 
-console.log(numberOfPairs([1,3,2,1,3,2,2]))
+console.log(numberOfPairs([1, 3, 2, 1, 3, 2, 2]))

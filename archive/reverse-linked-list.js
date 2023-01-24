@@ -9,10 +9,11 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-const reverseList = function(head) {
+const reverseList = function (head) {
   let lastNode = head
-  function goToNext (node, prev) {
-    if (node!==null) {
+
+  function goToNext(node, prev) {
+    if (node !== null) {
       lastNode = node
       goToNext(node.next, node)
       node.next = prev

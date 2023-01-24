@@ -22,4 +22,4 @@ const decrypt = function (code, k) {
   return ans
 };
 
-console.log(decrypt([2,4,9,3] ,-2))
+console.log(decrypt([2, 4, 9, 3], -2))

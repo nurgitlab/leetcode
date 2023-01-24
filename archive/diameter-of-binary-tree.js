@@ -10,11 +10,12 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var diameterOfBinaryTree = function(root) {
+var diameterOfBinaryTree = function (root) {
   let max = 0
-  function goToNext (node, g) {
-    if (node!==null) {
-      g+=1
+
+  function goToNext(node, g) {
+    if (node !== null) {
+      g += 1
       let l = goToNext(node.left, g) - g
       let r = goToNext(node.right, g) - g
       console.log(l, r, node.val)
@@ -25,7 +26,7 @@ var diameterOfBinaryTree = function(root) {
     }
   }
 
-  goToNext(root,  0)
+  goToNext(root, 0)
 
   return max
 };

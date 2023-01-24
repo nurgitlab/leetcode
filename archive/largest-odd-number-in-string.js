@@ -1,4 +1,4 @@
-const largestOddNumber = function(num) {
+const largestOddNumber = function (num) {
   let arr = num.split('')
   for (let i = arr.length - 1; i >= 0; i--) {
     if (Number(arr[i]) % 2 === 0) {

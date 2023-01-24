@@ -90,5 +90,5 @@ const countUnguarded = function (m, n, guards, walls) {
 };
 
 console.log(countUnguarded(
-  3,3, [[1,1]], [[0,1],[1,0],[2,1],[1,2]]
+  3, 3, [[1, 1]], [[0, 1], [1, 0], [2, 1], [1, 2]]
 ))

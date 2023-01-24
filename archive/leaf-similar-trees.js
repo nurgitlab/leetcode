@@ -11,10 +11,11 @@
  * @param {TreeNode} root2
  * @return {boolean}
  */
-var leafSimilar = function(root1, root2) {
+var leafSimilar = function (root1, root2) {
   let mem1 = []
   let mem2 = []
-  function goToNext (node, b) {
+
+  function goToNext(node, b) {
     if (node !== null) {
       if (node.left === null && node.right === null) {
         if (b) {
@@ -28,6 +29,7 @@ var leafSimilar = function(root1, root2) {
       goToNext(node.right, b)
     }
   }
+
   goToNext(root1, true)
   goToNext(root2, false)
 

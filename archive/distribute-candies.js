@@ -5,4 +5,4 @@ const distributeCandies = function (candyType) {
   return Math.min(Math.floor(candyType.length / 2), set.size)
 }
 
-console.log(distributeCandies( [1,1,2,3]))
+console.log(distributeCandies([1, 1, 2, 3]))

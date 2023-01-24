@@ -1,12 +1,14 @@
-const maxChunksToSorted = function(arr) {
+const maxChunksToSorted = function (arr) {
   let a = [...arr]
 
-  arr.sort((a,b) => a - b)
+  arr.sort((a, b) => a - b)
 
   let ans = 0
   for (let i = 0; i < arr.length; i++) {
-    ans+=1
-    if (arr[i] === a[i]) {continue} else {
+    ans += 1
+    if (arr[i] === a[i]) {
+      continue
+    } else {
       let mem = {}
 
       mem[a[i]] = [true, false]
@@ -33,16 +35,18 @@ const maxChunksToSorted = function(arr) {
   return ans
 }
 
-function all (obj) {
+function all(obj) {
   let ans = true
 
   Object.keys(obj).forEach(k => {
-    let [a,b] = obj[k]
+    let [a, b] = obj[k]
 
-    if (!(a && b)) {ans = false}
+    if (!(a && b)) {
+      ans = false
+    }
   })
 
   return ans
 }
 
-console.log(maxChunksToSorted([4,3,2,1,0]))
+console.log(maxChunksToSorted([4, 3, 2, 1, 0]))

@@ -1,4 +1,4 @@
-const construct2DArray = function(original, m, n) {
+const construct2DArray = function (original, m, n) {
   if (n * m !== original.length) {
     return []
   }
@@ -16,4 +16,4 @@ const construct2DArray = function(original, m, n) {
   return ans
 };
 
-console.log(construct2DArray([1,1,1,1], 4, 1))
+console.log(construct2DArray([1, 1, 1, 1], 4, 1))

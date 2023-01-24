@@ -1,4 +1,4 @@
-const repeatedNTimes = function(nums) {
+const repeatedNTimes = function (nums) {
   const mem = {}
   nums.forEach(el => {
     if (mem[el] === undefined) {

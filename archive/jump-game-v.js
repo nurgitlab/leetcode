@@ -1,20 +1,25 @@
-const maxJumps = function(arr, d) {
+const maxJumps = function (arr, d) {
   let mem = {}
   let max = 0
-  function jumpFrom (startId, s) {
+
+  function jumpFrom(startId, s) {
     console.log(startId, s)
     let canJump = []
     for (let i = startId + 1; i <= startId + d; i++) {
       if (i < arr.length) {
-        if (arr[i]>=arr[startId]) {break} else {
+        if (arr[i] >= arr[startId]) {
+          break
+        } else {
           canJump.push(i)
         }
       } else break
     }
 
-    for (let i = startId  - 1; i >= startId - d; i--) {
+    for (let i = startId - 1; i >= startId - d; i--) {
       if (i >= 0) {
-        if (arr[i]>=arr[startId]) {break} else {
+        if (arr[i] >= arr[startId]) {
+          break
+        } else {
           canJump.push(i)
         }
       } else break
@@ -36,16 +41,18 @@ const maxJumps = function(arr, d) {
   }
 
   for (let i = 0; i < arr.length; i++) {
-    mem[i] =  jumpFrom(i, 0)
+    mem[i] = jumpFrom(i, 0)
   }
 
   let mi = 0
   Object.keys(mem).forEach(k => {
-    if (mem[k]> mi) {mi = mem[k]}
+    if (mem[k] > mi) {
+      mi = mem[k]
+    }
   })
   return mi + 1
 }
 
 console.log(maxJumps(
-  [6,4,14,6,8,13,9,7,10,6,12], 2
+  [6, 4, 14, 6, 8, 13, 9, 7, 10, 6, 12], 2
 ))

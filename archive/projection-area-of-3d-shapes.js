@@ -12,8 +12,8 @@ const projectionArea = function (grid) {
       m1 = Math.max(m1, grid[i][j]) //максимальные по строкам
       m2 = Math.max(m2, grid[j][i])
     }
-    left+=m1
-    right+=m2
+    left += m1
+    right += m2
   }
 
   return vertical + left + right

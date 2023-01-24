@@ -1,5 +1,5 @@
-const maximumProduct = function(nums) {
-  nums = nums.sort((a,b) => Math.abs(b) - Math.abs(a))
+const maximumProduct = function (nums) {
+  nums = nums.sort((a, b) => Math.abs(b) - Math.abs(a))
   //все 3 положительные
   //1 положительное, 2 отрицательных
   let positive = []
@@ -21,7 +21,7 @@ const maximumProduct = function(nums) {
     max = Math.max(positive[0] * positive[1] * positive[2], max)
   }
 
-  if (positive.length >= 1 && otr.length >=2) {
+  if (positive.length >= 1 && otr.length >= 2) {
     max = Math.max(positive[0] * otr[0] * otr[1], max)
   }
 
@@ -35,4 +35,4 @@ const maximumProduct = function(nums) {
   return max
 }
 
-console.log(maximumProduct([-1,-2,-3]))
+console.log(maximumProduct([-1, -2, -3]))

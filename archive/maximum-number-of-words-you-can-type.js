@@ -1,4 +1,4 @@
-const canBeTypedWords = function(text, brokenLetters) {
+const canBeTypedWords = function (text, brokenLetters) {
   brokenLetters = brokenLetters.split('')
   text = text.split(' ')
 
@@ -6,10 +6,14 @@ const canBeTypedWords = function(text, brokenLetters) {
   text.forEach(word => {
     let ok = true
     word.split('').forEach(l => {
-      if (brokenLetters.includes(l)) {ok = false}
+      if (brokenLetters.includes(l)) {
+        ok = false
+      }
     })
 
-    if (ok) {ans++}
+    if (ok) {
+      ans++
+    }
   })
 
   return ans

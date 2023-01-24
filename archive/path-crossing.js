@@ -1,4 +1,4 @@
-const isPathCrossing = function(path) {
+const isPathCrossing = function (path) {
   let x = 0
   let y = 0
 
@@ -8,10 +8,18 @@ const isPathCrossing = function(path) {
 
   let ans = false
   path.split('').forEach(d => {
-    if (d === 'N') {y++}
-    if (d === 'S') {y--}
-    if (d === 'E') {x++}
-    if (d === 'W') {x--}
+    if (d === 'N') {
+      y++
+    }
+    if (d === 'S') {
+      y--
+    }
+    if (d === 'E') {
+      x++
+    }
+    if (d === 'W') {
+      x--
+    }
 
     if (mem[`[${x},${y}]`] === undefined) {
       mem[`[${x},${y}]`] = false

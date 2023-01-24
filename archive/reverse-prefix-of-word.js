@@ -1,7 +1,7 @@
-const reversePrefix = function(word, ch) {
+const reversePrefix = function (word, ch) {
   let ind = -1
   for (let i = 0; i < word.length; i++) {
-    if (word[i]===ch) {
+    if (word[i] === ch) {
       ind = i
       break
     }
@@ -13,7 +13,7 @@ const reversePrefix = function(word, ch) {
 
   let revWord = ''
   for (let i = 0; i <= ind; i++) {
-    revWord+=word[i]
+    revWord += word[i]
   }
 
   word = word.slice(ind + 1)

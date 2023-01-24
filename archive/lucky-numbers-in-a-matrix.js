@@ -1,4 +1,4 @@
-const luckyNumbers  = function(matrix) {
+const luckyNumbers = function (matrix) {
   let mem = {}
 
   for (let i = 0; i < matrix.length; i++) {
@@ -33,4 +33,4 @@ const luckyNumbers  = function(matrix) {
   return ans
 };
 
-console.log(luckyNumbers([[7,8],[1,2]]))
+console.log(luckyNumbers([[7, 8], [1, 2]]))

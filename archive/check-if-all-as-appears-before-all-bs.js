@@ -1,13 +1,13 @@
-var checkString = function(s) {
+var checkString = function (s) {
   let ans = true
   let a = true
   for (let i = 0; i < s.length; i++) {
     if (a) {
-      if (s[i]!=='a') {
+      if (s[i] !== 'a') {
         a = false
       }
     } else {
-      if (s[i]==='a') {
+      if (s[i] === 'a') {
         ans = false
       }
     }

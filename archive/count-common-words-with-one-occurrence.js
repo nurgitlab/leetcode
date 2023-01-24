@@ -18,7 +18,7 @@ const countWords = function (words1, words2) {
   return ans
 };
 
-function arrToObj (arr) {
+function arrToObj(arr) {
   const mem = {}
 
   arr.forEach(w => {

@@ -15,7 +15,7 @@ const subdomainVisits = function (cpdomains) {
       if (mem[s] === undefined) {
         mem[s] = count
       } else {
-        mem[s]+=count
+        mem[s] += count
       }
     }
   })

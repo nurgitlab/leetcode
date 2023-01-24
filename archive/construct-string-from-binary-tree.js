@@ -10,21 +10,21 @@
  * @param {TreeNode} root
  * @return {string}
  */
-var tree2str = function(root) {
-  function goTo (node) {
-    if (node!== null) {
+var tree2str = function (root) {
+  function goTo(node) {
+    if (node !== null) {
       let r = node.val + ''
-      if (node.left!== null) {
-        r+='(' + goTo(node.left) + ')'
+      if (node.left !== null) {
+        r += '(' + goTo(node.left) + ')'
       }
-      if (node.right!== null) {
-        if (node.left=== null) {
-          r+='()'
+      if (node.right !== null) {
+        if (node.left === null) {
+          r += '()'
         }
-        r+='(' +goTo(node.right)+ ')'
+        r += '(' + goTo(node.right) + ')'
       }
       return r
-    }else {
+    } else {
       return ''
     }
   }

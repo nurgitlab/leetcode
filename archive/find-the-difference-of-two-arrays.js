@@ -1,4 +1,4 @@
-const findDifference = function(nums1, nums2) {
+const findDifference = function (nums1, nums2) {
   let mem1 = []
   let mem2 = []
 
@@ -24,4 +24,4 @@ const findDifference = function(nums1, nums2) {
   return [mem1, mem2]
 };
 
-console.log(findDifference([1,2,3, 3], [2,4,6]))
+console.log(findDifference([1, 2, 3, 3], [2, 4, 6]))

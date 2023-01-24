@@ -24,7 +24,7 @@ const findEvenNumbers = function (digits) {
   }
   let ans = [...set]
 
-  ans.sort((a,b) => (a-b))
+  ans.sort((a, b) => (a - b))
   return ans
 };
 

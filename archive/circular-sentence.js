@@ -7,7 +7,7 @@ const isCircularSentence = function (sentence) {
     }
   }
 
-  if (sentence[0][0]!== sentence[sentence.length - 1][sentence[sentence.length - 1].length - 1]) {
+  if (sentence[0][0] !== sentence[sentence.length - 1][sentence[sentence.length - 1].length - 1]) {
     return false
   }
 

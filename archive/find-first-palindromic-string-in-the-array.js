@@ -1,4 +1,4 @@
-const firstPalindrome = function(words) {
+const firstPalindrome = function (words) {
   let ans = ''
   for (let word of words) {
     if (word === word.split('').reverse().join('')) {
@@ -10,4 +10,4 @@ const firstPalindrome = function(words) {
   return ans
 };
 
-console.log(firstPalindrome(["notapalindrome","racecar"]))
+console.log(firstPalindrome(["notapalindrome", "racecar"]))

@@ -1,4 +1,4 @@
-const hammingWeight = function(n) {
+const hammingWeight = function (n) {
   const str = n.toString(2).split('')
   let ans = 0
   str.forEach(el => {

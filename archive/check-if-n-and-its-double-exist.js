@@ -15,4 +15,4 @@ const checkIfExist = function (arr) {
   return ans
 };
 
-console.log(checkIfExist([0,0]))
+console.log(checkIfExist([0, 0]))

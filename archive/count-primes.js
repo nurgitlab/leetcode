@@ -6,7 +6,7 @@ const countPrimes = function (num) {
     if (!resheto[i]) {
       primes.push(i)
 
-      for (let j = i * i; j <= num; j+=i) {
+      for (let j = i * i; j <= num; j += i) {
         resheto[j] = true
       }
     }

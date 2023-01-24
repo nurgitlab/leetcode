@@ -10,10 +10,11 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const findBottomLeftValue = function(root) {
+const findBottomLeftValue = function (root) {
   let l = {}
+
   function go(node, s, isLeft) {
-    if (node!==null) {
+    if (node !== null) {
       console.log(s, node.val)
       if (l[s] === undefined) {
         l[s] = node.val
@@ -31,7 +32,7 @@ const findBottomLeftValue = function(root) {
     arr.push([Number[k], l[k]])
   })
 
-  arr = arr.sort((a,b) => a[0] - b[0]).map(el => el[1])
+  arr = arr.sort((a, b) => a[0] - b[0]).map(el => el[1])
 
   return arr[arr.length - 1]
   console.log(l)

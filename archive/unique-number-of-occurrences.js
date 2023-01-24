@@ -1,4 +1,4 @@
-const uniqueOccurrences = function(arr) {
+const uniqueOccurrences = function (arr) {
   let mem = {}
   for (let i = 0; i < arr.length; i++) {
     if (mem[arr[i]] === undefined) {
@@ -16,4 +16,4 @@ const uniqueOccurrences = function(arr) {
   return (set.size === mem2.length)
 };
 
-console.log(uniqueOccurrences([1,2,2,1,1,3]))
+console.log(uniqueOccurrences([1, 2, 2, 1, 1, 3]))

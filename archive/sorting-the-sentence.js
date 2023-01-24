@@ -1,4 +1,4 @@
-const sortSentence = function(s) {
+const sortSentence = function (s) {
   let arr = s.split(' ')
   let ans = []
   arr.forEach(el => {
@@ -8,4 +8,4 @@ const sortSentence = function(s) {
   return ans.join(' ')
 };
 
-console.log(sortSentence( "is2 sentence4 This1 a3"))
+console.log(sortSentence("is2 sentence4 This1 a3"))

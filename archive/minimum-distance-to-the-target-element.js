@@ -1,4 +1,4 @@
-const getMinDistance = function(nums, target, start) {
+const getMinDistance = function (nums, target, start) {
   let mem = Infinity
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === target) {
@@ -9,4 +9,4 @@ const getMinDistance = function(nums, target, start) {
   return mem
 };
 
-console.log(getMinDistance([5,2,3,5,5], 5 , 2))
+console.log(getMinDistance([5, 2, 3, 5, 5], 5, 2))

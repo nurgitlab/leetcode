@@ -6,7 +6,7 @@ const garbageCollection = function (garbage, travel) {
   let cm = 0
   let cp = 0
   let cg = 0
-  
+
   garbage.forEach((el, i) => {
     el.split('').forEach(el => {
       if (el === 'G') {
@@ -32,7 +32,7 @@ const garbageCollection = function (garbage, travel) {
 
   let sum = 0
   for (let i = 0; i < travel.length; i++) {
-    sum+=travel[i]
+    sum += travel[i]
 
     if (i + 1 === m) {
       rm = sum
@@ -50,4 +50,4 @@ const garbageCollection = function (garbage, travel) {
   return rp + rm + rg + cm + cp + cg
 }
 
-console.log(garbageCollection( ["MMM","PGM","GP"], [3,10]))
+console.log(garbageCollection(["MMM", "PGM", "GP"], [3, 10]))

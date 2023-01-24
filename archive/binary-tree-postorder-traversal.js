@@ -10,9 +10,9 @@
  * @param {TreeNode} root
  * @return {number[]}
  */
-var postorderTraversal = function(root) {
+var postorderTraversal = function (root) {
   function goToNext(node) {
-    if (node!==null) {
+    if (node !== null) {
       return [...goToNext(node.left), ...goToNext(node.right), node.val]
     } else {
       return []

@@ -1,4 +1,4 @@
-const maxDepth = function(s) {
+const maxDepth = function (s) {
   let mem = 0
   let max = 0
   s.split('').forEach(el => {

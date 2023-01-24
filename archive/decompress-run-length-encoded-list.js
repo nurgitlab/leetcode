@@ -1,8 +1,8 @@
-const decompressRLElist = function(nums) {
+const decompressRLElist = function (nums) {
   let ans = []
-  for (let i = 0; i < nums.length; i+=2) {
+  for (let i = 0; i < nums.length; i += 2) {
     while (nums[i] > 0) {
-      ans.push(nums[i+1])
+      ans.push(nums[i + 1])
       nums[i]--
     }
   }
@@ -10,4 +10,4 @@ const decompressRLElist = function(nums) {
   return ans
 };
 
-console.log(decompressRLElist( [1,1,2,3]))
+console.log(decompressRLElist([1, 1, 2, 3]))

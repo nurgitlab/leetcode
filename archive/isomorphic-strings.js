@@ -1,4 +1,4 @@
-const isIsomorphic = function(s, t) {
+const isIsomorphic = function (s, t) {
   let mem = {}
   for (let i = 0; i < s.length; i++) {
     if (mem[s[i]] === undefined) {
@@ -23,4 +23,4 @@ const isIsomorphic = function(s, t) {
   return true
 };
 
-console.log(isIsomorphic("badc","baba"))
+console.log(isIsomorphic("badc", "baba"))

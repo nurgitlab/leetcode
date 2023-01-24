@@ -1,9 +1,9 @@
-const kClosest = function(points, k) {
+const kClosest = function (points, k) {
   let arr = points.map(p => {
-    return [p[0]*p[0] + p[1]*p[1], [p[0], p[1]]]
+    return [p[0] * p[0] + p[1] * p[1], [p[0], p[1]]]
   })
 
-  arr.sort((a,b) => a[0] - b[0])
+  arr.sort((a, b) => a[0] - b[0])
 
   let ans = []
   for (let i = 0; i < k; i++) {
@@ -12,4 +12,4 @@ const kClosest = function(points, k) {
   return ans
 };
 
-console.log(kClosest([[3,3],[5,-1],[-2,4]], 2))
+console.log(kClosest([[3, 3], [5, -1], [-2, 4]], 2))

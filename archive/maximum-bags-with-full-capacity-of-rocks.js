@@ -1,4 +1,4 @@
-const maximumBags = function(capacity, rocks, additionalRocks) {
+const maximumBags = function (capacity, rocks, additionalRocks) {
   let mem = {}
   for (let i = 0; i < capacity.length; i++) {
     let r = Math.max(0, capacity[i] - rocks[i])
@@ -15,17 +15,19 @@ const maximumBags = function(capacity, rocks, additionalRocks) {
     let count = Math.floor(additionalRocks / Number(k))
 
     if (count >= mem[k]) {
-      ans+=mem[k]
-      additionalRocks-=mem[k]*k
+      ans += mem[k]
+      additionalRocks -= mem[k] * k
     } else {
-      ans+=count
-      additionalRocks-=count*k
+      ans += count
+      additionalRocks -= count * k
     }
 
-  if (additionalRocks <= 0) {break}
+    if (additionalRocks <= 0) {
+      break
+    }
   }
 
   return ans
 }
 
-console.log(maximumBags([10,2,2], [2,2,0], 100))
+console.log(maximumBags([10, 2, 2], [2, 2, 0], 100))

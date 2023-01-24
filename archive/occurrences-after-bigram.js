@@ -4,7 +4,7 @@ const findOcurrences = function (text, first, second) {
   let ans = []
   for (let i = 0; i < textArr.length - 2; i++) {
     if (textArr[i] === first && textArr[i + 1] === second) {
-      ans.push(textArr[i+2])
+      ans.push(textArr[i + 2])
     }
   }
   return ans

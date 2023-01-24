@@ -9,11 +9,11 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var deleteDuplicates = function(head) {
-  function goTo (node, prev) {
-    if (node!==null) {
+var deleteDuplicates = function (head) {
+  function goTo(node, prev) {
+    if (node !== null) {
       console.log(prev, node)
-      if (prev!==null) {
+      if (prev !== null) {
         if (prev.val === node.val) {
           prev.next = node.next
         }

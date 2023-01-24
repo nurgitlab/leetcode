@@ -10,10 +10,11 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const maxDepth = function(root) {
+const maxDepth = function (root) {
   let max = 0
+
   function goToNext(node, s) {
-    if (node!==null) {
+    if (node !== null) {
       s = s + 1
       max = Math.max(s, max)
 

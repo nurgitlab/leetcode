@@ -1,4 +1,4 @@
-const evaluate = function(s, knowledge) {
+const evaluate = function (s, knowledge) {
   let mem = {}
   knowledge.forEach(([a, b]) => {
     mem[a] = b
@@ -9,21 +9,21 @@ const evaluate = function(s, knowledge) {
   for (let i = 0; i < s.length; i++) {
     if (s[i] === '(') {
       let l = ''
-      while (s[i+1]!== ')') {
+      while (s[i + 1] !== ')') {
         i++
-        l+=s[i]
+        l += s[i]
       }
-      if (mem[l]===undefined) {
-        ans+='?'
+      if (mem[l] === undefined) {
+        ans += '?'
       } else {
-        ans+=mem[l]
+        ans += mem[l]
       }
-    } else if (s[i]!==')') {
-      ans+=s[i]
+    } else if (s[i] !== ')') {
+      ans += s[i]
     }
   }
 
   return ans
 }
 
-console.log(evaluate("(a)(a)(a)aaa",   [["a","yes"]]))
+console.log(evaluate("(a)(a)(a)aaa", [["a", "yes"]]))

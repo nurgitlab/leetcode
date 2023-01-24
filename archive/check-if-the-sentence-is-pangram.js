@@ -10,13 +10,13 @@ var checkIfPangram = function (sentence) {
   let ans = 0
 
   Object.keys(mem).forEach(k => {
-    ans+=1
+    ans += 1
   })
 
-  if (ans === 26)  {
+  if (ans === 26) {
     return true
   } else {
-    return  false
+    return false
   }
 };
 

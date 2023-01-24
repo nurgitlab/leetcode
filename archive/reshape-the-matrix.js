@@ -1,4 +1,4 @@
-const matrixReshape = function(mat, r, c) {
+const matrixReshape = function (mat, r, c) {
   if (r * c !== mat.length * mat[0].length) {
     return mat
   }
@@ -8,7 +8,7 @@ const matrixReshape = function(mat, r, c) {
     b = [...b, ...mat[i]]
   }
 
-  let s= 0
+  let s = 0
   let ans = []
 
   for (let i = 0; i < r; i++) {
@@ -22,4 +22,4 @@ const matrixReshape = function(mat, r, c) {
   return ans
 }
 
-console.log(matrixReshape([[1,2],[3,4]], 1, 4))
+console.log(matrixReshape([[1, 2], [3, 4]], 1, 4))

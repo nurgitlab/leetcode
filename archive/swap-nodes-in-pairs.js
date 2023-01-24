@@ -9,9 +9,10 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var swapPairs = function(head) {
+var swapPairs = function (head) {
   let arr = []
-  function next (node) {
+
+  function next(node) {
     if (node !== null) {
       arr.push(node.val)
       next(node.next)
@@ -22,10 +23,10 @@ var swapPairs = function(head) {
 
   console.log(arr)
 
-  for (let i = 0; i < arr.length; i+=2) {
+  for (let i = 0; i < arr.length; i += 2) {
     if (i + 1 < arr.length) {
       let c = arr[i]
-      arr[i] = arr[i+1]
+      arr[i] = arr[i + 1]
       arr[i + 1] = c
     }
   }
@@ -33,7 +34,7 @@ var swapPairs = function(head) {
   console.log(arr)
   let i = 0
 
-  function next2 (node) {
+  function next2(node) {
     if (node !== null) {
       node.val = arr[i]
       i++

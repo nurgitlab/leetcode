@@ -1,4 +1,4 @@
-const findWords = function(words) {
+const findWords = function (words) {
   let arr1 = 'qwertyuiop'.split('')
   let arr2 = 'asdfghjkl'.split('')
   let arr3 = 'zxcvbnm'.split('')
@@ -37,4 +37,4 @@ const findWords = function(words) {
 };
 
 
-console.log(findWords(["Hello","Alaska","Dad","Peace"]))
+console.log(findWords(["Hello", "Alaska", "Dad", "Peace"]))

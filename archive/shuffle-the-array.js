@@ -1,4 +1,4 @@
-const shuffle = function(nums, n) {
+const shuffle = function (nums, n) {
   let x = []
   let y = []
   for (let i = 0; i < n; i++) {

@@ -1,14 +1,14 @@
-const carPooling = function(trips, capacity) {
-  trips.sort((a,b) => a[1] - b[1])
+const carPooling = function (trips, capacity) {
+  trips.sort((a, b) => a[1] - b[1])
 
   let mem = {}
 
-  trips.forEach(([o,b,f]) => {
+  trips.forEach(([o, b, f]) => {
     for (let i = b; i < f; i++) {
       if (mem[i] === undefined) {
         mem[i] = 0
       }
-      mem[i]+=o
+      mem[i] += o
     }
   })
 
@@ -23,4 +23,4 @@ const carPooling = function(trips, capacity) {
   return ans
 }
 
-console.log(carPooling([[2,1,5],[3,3,7]] , 4))
+console.log(carPooling([[2, 1, 5], [3, 3, 7]], 4))

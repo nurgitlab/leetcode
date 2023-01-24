@@ -6,14 +6,14 @@ const minOperations = function (n) {
     sum += arr[i]
   }
 
-  let s  = sum / n
+  let s = sum / n
 
   let ans = 0
   arr.forEach(el => {
-    ans+=Math.abs(el - s)
+    ans += Math.abs(el - s)
   })
 
-  return ans/2
+  return ans / 2
 }
 
 console.log(minOperations(3))

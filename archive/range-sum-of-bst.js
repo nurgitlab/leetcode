@@ -3,7 +3,9 @@ const rangeSumBST = function (root, low, high) {
 
   function goToList(arr) {
     console.log(arr.val)
-    if (arr.val === null) {arr.val = 0}
+    if (arr.val === null) {
+      arr.val = 0
+    }
     if (arr.val >= low && arr.val <= high) {
       sum += arr.val
     }

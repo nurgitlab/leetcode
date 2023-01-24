@@ -13,8 +13,10 @@ const minimumRounds = function (tasks) {
     if (mem[k] === 1) {
       can = false
     } else {
-      ans+=Math.floor(mem[k]/3)
-      if (mem[k]%3 !== 0) {ans++}
+      ans += Math.floor(mem[k] / 3)
+      if (mem[k] % 3 !== 0) {
+        ans++
+      }
     }
   })
 

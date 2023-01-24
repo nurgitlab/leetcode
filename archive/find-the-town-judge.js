@@ -1,4 +1,4 @@
-const findJudge = function(n, trust) {
+const findJudge = function (n, trust) {
   //judge - судья
 
   const trusted = {}
@@ -37,4 +37,4 @@ const findJudge = function(n, trust) {
 }
 
 
-console.log(findJudge(3, [[1,3],[2,3]]))
+console.log(findJudge(3, [[1, 3], [2, 3]]))

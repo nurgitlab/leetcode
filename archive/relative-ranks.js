@@ -1,5 +1,5 @@
-const findRelativeRanks = function(score) {
-  let sorted = [...score].sort((a,b) => a - b)
+const findRelativeRanks = function (score) {
+  let sorted = [...score].sort((a, b) => a - b)
   let mem = {}
 
   sorted.forEach((el, i) => {
@@ -18,4 +18,4 @@ const findRelativeRanks = function(score) {
   return score.map(el => mem[el])
 }
 
-console.log(findRelativeRanks([10,3,8,9,4]))
+console.log(findRelativeRanks([10, 3, 8, 9, 4]))

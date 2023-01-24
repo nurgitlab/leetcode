@@ -1,4 +1,4 @@
-const lastStoneWeight = function(stones) {
+const lastStoneWeight = function (stones) {
   while (stones.length > 1) {
     let m1 = 0
     let m2 = 0
@@ -19,8 +19,8 @@ const lastStoneWeight = function(stones) {
       }
     })
 
-    stones[i1]-=stones[i2]
-    stones[i2]  = 0
+    stones[i1] -= stones[i2]
+    stones[i2] = 0
     stones = stones.filter(stone => stone > 0)
   }
 
@@ -30,4 +30,4 @@ const lastStoneWeight = function(stones) {
   return 0
 }
 
-console.log(lastStoneWeight([2,7,4,1,8,1]))
+console.log(lastStoneWeight([2, 7, 4, 1, 8, 1]))

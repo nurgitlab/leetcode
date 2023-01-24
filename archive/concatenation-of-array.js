@@ -1,4 +1,4 @@
-const getConcatenation = function(nums) {
+const getConcatenation = function (nums) {
   return [...nums, ...nums]
 };
 

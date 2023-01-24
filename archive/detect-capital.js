@@ -1,10 +1,10 @@
-const detectCapitalUse = function(word) {
+const detectCapitalUse = function (word) {
   if (word === word.toLowerCase() || word === word.toUpperCase()) {
     return true
   } else {
     let s = ''
     for (let i = 1; i < word.length; i++) {
-      s+=word[i]
+      s += word[i]
     }
 
     if (s !== s.toLowerCase()) {

@@ -1,4 +1,4 @@
-const wordPattern = function(pattern, s) {
+const wordPattern = function (pattern, s) {
   pattern = pattern.split('')
   s = s.split(' ')
   if (pattern.length !== s.length) {
@@ -8,7 +8,7 @@ const wordPattern = function(pattern, s) {
   let mem = {}
   let set = new Set()
   for (let i = 0; i < s.length; i++) {
-    if (mem[pattern[i]]!==s[i]) {
+    if (mem[pattern[i]] !== s[i]) {
       if (mem[pattern[i]] === undefined) {
         if (set.has(s[i])) {
           return false

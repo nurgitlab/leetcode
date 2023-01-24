@@ -13,7 +13,7 @@ const maxSatisfaction = function (satisfaction) {
 
       let la = 0
       for (let j = i; j < satisfaction.length; j++) {
-        la+=(j - i + 1) * satisfaction[j]
+        la += (j - i + 1) * satisfaction[j]
       }
 
       ans = Math.max(ans, la)
@@ -22,4 +22,4 @@ const maxSatisfaction = function (satisfaction) {
   return ans
 }
 
-console.log(maxSatisfaction([4,3,2]))
+console.log(maxSatisfaction([4, 3, 2]))

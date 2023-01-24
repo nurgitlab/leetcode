@@ -10,14 +10,14 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const findSecondMinimumValue = function(root) {
+const findSecondMinimumValue = function (root) {
   let min1 = Infinity
   let min2 = Infinity
 
   function goToList(arr) {
     console.log(arr.val)
     if (arr.val !== null) {
-      if (arr.val !== min1 && arr.val !==min2) {
+      if (arr.val !== min1 && arr.val !== min2) {
         if (min2 > arr.val) {
           if (min1 > arr.val) {
             min2 = min1

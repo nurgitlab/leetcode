@@ -1,8 +1,8 @@
-var frequencySort = function(nums) {
+var frequencySort = function (nums) {
   let mem = {}
 
   nums.forEach(el => {
-    if (mem[el]===undefined) {
+    if (mem[el] === undefined) {
       mem[el] = 1
     } else {
       mem[el]++
@@ -15,15 +15,14 @@ var frequencySort = function(nums) {
     memArr.push([Number(k), mem[k]])
   })
 
-  memArr.sort((a,b) => {
-    if (a[1]===b[1]) {
-      if (a[0]>b[0]) {
+  memArr.sort((a, b) => {
+    if (a[1] === b[1]) {
+      if (a[0] > b[0]) {
         return -1
       } else {
         return 1
       }
-    } else
-    if (a[1] > b[1]) {
+    } else if (a[1] > b[1]) {
       return 1
     } else {
       return -1
@@ -40,4 +39,4 @@ var frequencySort = function(nums) {
   return ans
 };
 
-console.log(frequencySort([-1,1,-6,4,5,-6,1,4,1]))
+console.log(frequencySort([-1, 1, -6, 4, 5, -6, 1, 4, 1]))

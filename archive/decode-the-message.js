@@ -15,4 +15,4 @@ const decodeMessage = function (key, message) {
   return message.join('')
 }
 
-console.log(decodeMessage( "the quick brown fox jumps over the lazy dog",   "vkbs bs t suepuv"))
+console.log(decodeMessage("the quick brown fox jumps over the lazy dog", "vkbs bs t suepuv"))

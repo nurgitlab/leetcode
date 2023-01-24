@@ -1,4 +1,4 @@
-const sortJumbled = function(mapping, nums) {
+const sortJumbled = function (mapping, nums) {
   let mem = {}
 
   nums.forEach((el, i) => mem[el] = i)
@@ -9,7 +9,7 @@ const sortJumbled = function(mapping, nums) {
     return [el, Number(s.join(''))]
   })
 
-  nums.sort((a,b) => {
+  nums.sort((a, b) => {
     if (a[1] === b[1]) {
       return mem[a[0]] - mem[b[0]]
     } else {
@@ -19,4 +19,4 @@ const sortJumbled = function(mapping, nums) {
   return nums.map(el => el[0])
 }
 
-console.log(sortJumbled([8,9,4,0,2,1,3,5,7,6], [991,338,38]))
+console.log(sortJumbled([8, 9, 4, 0, 2, 1, 3, 5, 7, 6], [991, 338, 38]))

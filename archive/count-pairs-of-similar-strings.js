@@ -16,7 +16,7 @@ const similarPairs = function (words) {
   let sv = 0
 
   Object.keys(mem).forEach(k => {
-    sv+=sum(mem[k] - 1)
+    sv += sum(mem[k] - 1)
   })
 
   return sv
@@ -25,7 +25,7 @@ const similarPairs = function (words) {
 function sum(n) {
   let s = 0
   for (let i = 0; i <= n; i++) {
-    s+=i
+    s += i
   }
 
   return s

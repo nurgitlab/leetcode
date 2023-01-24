@@ -1,9 +1,9 @@
-const asteroidsDestroyed = function(mass, asteroids) {
-  asteroids = asteroids.sort((a,b) => a - b)
+const asteroidsDestroyed = function (mass, asteroids) {
+  asteroids = asteroids.sort((a, b) => a - b)
 
   for (let i = 0; i < asteroids.length; i++) {
     if (asteroids[i] <= mass) {
-      mass+=asteroids[i]
+      mass += asteroids[i]
     } else {
       return false
     }
@@ -12,4 +12,4 @@ const asteroidsDestroyed = function(mass, asteroids) {
   return true
 }
 
-console.log(asteroidsDestroyed( 10,  [3,9,19,5,21]))
+console.log(asteroidsDestroyed(10, [3, 9, 19, 5, 21]))

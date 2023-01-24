@@ -10,9 +10,10 @@
  * @param {number} k
  * @return {ListNode}
  */
-var reverseKGroup = function(head, k) {
+var reverseKGroup = function (head, k) {
   let arr = []
-  function next (node) {
+
+  function next(node) {
     if (node !== null) {
       arr.push(node.val)
       next(node.next)
@@ -23,7 +24,7 @@ var reverseKGroup = function(head, k) {
 
   console.log(arr)
 
-  for (let i = 0; i < arr.length; i+=k) {
+  for (let i = 0; i < arr.length; i += k) {
     if (i + k <= arr.length) {
       let la = []
       for (let j = i; j < i + k; j++) {
@@ -39,7 +40,7 @@ var reverseKGroup = function(head, k) {
   console.log(arr)
   let i = 0
 
-  function next2 (node) {
+  function next2(node) {
     if (node !== null) {
       node.val = arr[i]
       i++

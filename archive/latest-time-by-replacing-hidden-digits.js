@@ -1,8 +1,8 @@
-const maximumTime = function(time) {
+const maximumTime = function (time) {
   time = time.split('')
 
   if (time[0] === '?') {
-    if (time[1]!=="?") {
+    if (time[1] !== "?") {
       if (Number(time[1]) > 3) {
         time[0] = '1'
       } else {

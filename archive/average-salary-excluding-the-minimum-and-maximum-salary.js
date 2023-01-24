@@ -30,4 +30,4 @@ const average = function (salary) {
   return sum / (salary.length - cMin - cMax)
 };
 
-console.log(average([4000,3000,1000,2000]))
+console.log(average([4000, 3000, 1000, 2000]))

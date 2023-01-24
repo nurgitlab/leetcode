@@ -1,7 +1,8 @@
-var goodNodes = function(root) {
+var goodNodes = function (root) {
   let ans = 0
-  function goToNext (tree, maxValue) {
-    if (tree.val!==null) {
+
+  function goToNext(tree, maxValue) {
+    if (tree.val !== null) {
       if (tree.val >= maxValue) {
         ans++
       }

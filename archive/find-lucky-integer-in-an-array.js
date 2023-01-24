@@ -1,7 +1,11 @@
-const findLucky = function(arr) {
+const findLucky = function (arr) {
   let mem = {}
   arr.forEach(n => {
-    if (mem[n] === undefined) {mem[n] = 1} else {mem[n]++}
+    if (mem[n] === undefined) {
+      mem[n] = 1
+    } else {
+      mem[n]++
+    }
   })
 
   let ans = -1
@@ -14,4 +18,4 @@ const findLucky = function(arr) {
   return ans
 }
 
-console.log(findLucky([2,2,3,4]))
+console.log(findLucky([2, 2, 3, 4]))

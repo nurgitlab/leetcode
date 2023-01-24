@@ -1,5 +1,7 @@
-const strongPasswordCheckerII = function(password) {
-  if (password.length < 8) {return false}
+const strongPasswordCheckerII = function (password) {
+  if (password.length < 8) {
+    return false
+  }
   if (password.toLowerCase() === password) {
     return false
   }
@@ -92,7 +94,9 @@ const strongPasswordCheckerII = function(password) {
   }
 
   for (let i = 0; i < password.length - 1; i++) {
-    if (password[i] === password[i+1]) {return false}
+    if (password[i] === password[i + 1]) {
+      return false
+    }
   }
   return true
 }

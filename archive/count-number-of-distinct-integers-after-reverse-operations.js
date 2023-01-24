@@ -1,4 +1,4 @@
-const countDistinctIntegers = function(nums) {
+const countDistinctIntegers = function (nums) {
   let set = new Set(nums)
 
   nums.forEach(el => {
@@ -9,4 +9,4 @@ const countDistinctIntegers = function(nums) {
   return set.size
 }
 
-console.log(countDistinctIntegers([1,13,10,12,31]))
+console.log(countDistinctIntegers([1, 13, 10, 12, 31]))

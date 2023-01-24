@@ -17,4 +17,4 @@ const maxScore = function (cardPoints, k) {
   return sum
 }
 
-console.log(maxScore([100,40,17,9,73,75], 3))
+console.log(maxScore([100, 40, 17, 9, 73, 75], 3))

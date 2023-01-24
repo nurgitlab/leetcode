@@ -1,4 +1,4 @@
-const createTargetArray = function(nums, index) {
+const createTargetArray = function (nums, index) {
   let ans = []
   for (let i = 0; i < nums.length; i++) {
     if (ans[index[i]] === undefined) {
@@ -14,4 +14,4 @@ const createTargetArray = function(nums, index) {
   return ans
 }
 
-console.log(createTargetArray([1,2,3,4,0], [0,1,2,3,0]))
+console.log(createTargetArray([1, 2, 3, 4, 0], [0, 1, 2, 3, 0]))

@@ -35,4 +35,4 @@ const islandPerimeter = function (grid) {
 };
 
 console.log(islandPerimeter(
-  [[0,0,1]]))
+  [[0, 0, 1]]))
