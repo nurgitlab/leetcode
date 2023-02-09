@@ -8,7 +8,6 @@ const levelOrder = function(root) {
       for (let i = 0; i < node.children.length; i++) {
         go(node.children[i], s + 1)
       }
-
     }
   }
 
