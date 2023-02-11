@@ -1,10 +1,25 @@
-
+/**
+ * @param {string} s
+ * @param {number} k
+ * @return {string}
+ */
 const reverseStr = function(s, k) {
-  let a = ''
   let isRev = true
+  let ans = ''
   for (let i = 0; i < s.length; i+=k) {
-    for (let j = i; j < i + k; j++) {
-
+    let h = ''
+    for (let j = i; j < Math.min(i + k, s.length); j++) {
+      h+=s[j]
     }
+    console.log(h, isRev)
+    if (isRev) {
+      h = h.split('').reverse().join('')
+    }
+
+    ans+=h
+
+    isRev=!isRev
   }
+
+  return ans
 };
