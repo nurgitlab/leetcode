@@ -1,30 +1,41 @@
-/**
- * Definition for singly-linked list.
- * function ListNode(val, next) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.next = (next===undefined ? null : next)
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-var deleteDuplicates = function (head) {
-  function goTo(node, prev) {
-    if (node !== null) {
-      console.log(prev, node)
-      if (prev !== null) {
-        if (prev.val === node.val) {
-          prev.next = node.next
-        }
-      }
-      goTo(node.next, node)
+const deleteDuplicates = function(head) {
+  let arr = []
+
+  function go(node) {
+    if (node!==null) {
+      arr.push(node.val)
+      go(node.next)
     }
   }
 
-  goTo(head, null)
+  go(head)
+
+  let na = []
+
+  for (let i = 0; i < arr.length; i++){
+    na.push(arr[i])
+    while (arr[i] === arr[i + 1]) {
+      i++
+    }
+  }
+
+  function gor (node,s) {
+    if (node!==null) {
+      if (s < na.length) {
+        node.val = na[s]
+        if (s + 1 < na.length) {
+          gor(node.next, s + 1)
+        } else {
+          node.next = null
+        }
+      } else {
+        node = null
+      }
+    }
+  }
+
+  gor(head, 0)
+  console.log(na)
 
   return head
 };
-
-JSON.stringify()
