@@ -2,7 +2,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var minMoves2 = function(nums) {
+const minMoves2 = function(nums) {
   nums = nums.sort((a,b) => a - b)
 
   let median = nums[Math.floor(nums.length / 2)]
