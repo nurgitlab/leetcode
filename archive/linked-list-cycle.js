@@ -1,16 +1,16 @@
 const hasCycle = function(head) {
-  let ans = false
-  function go(node) {
-    if (node!== null) {
-      if (node.val === '*') {
-        ans = true
-      } else {
-        node.val = '*'
-        go(node.next)
+  let set = new Set()
+  function go (node) {
+    if (node !== null) {
+      if (set.has(node)) {
+        return true
       }
+      set.add(node)
+      return go(node.next)
+    } else {
+      return false
     }
   }
-  go(head)
 
-  return ans
+  return go(head)
 };

@@ -1,42 +1,13 @@
-var maxArea = function (height) {
-  let left = 0
-  let right = height.length - 1
-  let sum = 0
+const maxArea = function(height) {
+  let [l, r] = [0, height.length - 1]
 
-  while (left < right) {
-    sum = maxOf(
-      (right - left) * minOf(
-        height[left],
-        height[right]
-      ),
-      sum
-    )
+  let max = 0
 
-    if (height[left] < height[right]) {
-      left++
-    } else {
-      right--
-    }
+  while (l < r) {
+    max = Math.max(max, (r - l) * Math.min(height[r], height[l]))
+
+    if (height[l] > height[r]) {r--} else {l++}
   }
 
-  return sum
+  return max
 };
-
-function minOf(a, b) {
-  if (a < b) {
-    return a
-  } else {
-    return b
-  }
-}
-
-function maxOf(a, b) {
-  if (a > b) {
-    return a
-  } else {
-    return b
-  }
-}
-
-
-console.log(maxArea([1, 3, 2, 5, 25, 24, 5]))
