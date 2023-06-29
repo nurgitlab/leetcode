@@ -10,26 +10,24 @@
  * @return {number[]}
  */
 var nextLargerNodes = function(head) {
-  let arr = []
+  let stack = [], def = head, ans = []
 
-  while (head!==null) {
-    arr.push(head.val)
+  while (head !== null) {
+    while (stack[stack.length - 1]!== undefined && stack[stack.length - 1].val < head.val) {
+      stack[stack.length - 1].val = head.val
+      stack.pop()
+    }
+
+    stack.push(head)
     head = head.next
   }
 
-  arr = arr.reverse()
-  let max = -Infinity
+  for (let i = 0; i < stack.length; i++) stack[i].val = 0
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] >= max) {
-      max = arr[i]
-      arr[i] = 0
-    } else {
-      arr[i] = max
-    }
+  while (def !== null) {
+    ans.push(def.val)
+    def = def.next
   }
 
-  console.log(arr)
-
-  return arr.reverse()
-};
+  return ans
+}
